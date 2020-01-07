@@ -15,10 +15,10 @@ L_Map[2] = '숨겨진공허 (유로파)';  //13
 L_Map[3] = '벙커E15 (유로파)'; //14
 L_Map[4] = '파멸 (유로파)'; //15
 
-L_Ammo[0] = '팔';
-L_Ammo[1] = '가슴';
-L_Ammo[2] = '머리';
-L_Ammo[3] = '다리';
+L_Ammo[0] = '가슴';
+L_Ammo[1] = '머리';
+L_Ammo[2] = '다리';
+L_Ammo[3] = '팔';
 
 var TodayL= L_Map[daysSince%5] +" / "+L_Ammo[daysSince%4];
 
@@ -31,10 +31,11 @@ M_Map[2] = '벨레스 미궁 (발사기지)';  //13
 M_Map[3] = '숨겨진 공허 (유로파)'; //14
 M_Map[4] = '벙커 E15 (유로파)'; //15
 
-M_Ammo[0] = '다리';
-M_Ammo[1] = '팔';
-M_Ammo[2] = '가슴';
-M_Ammo[3] = '머리';
+M_Ammo[0] = '팔';
+M_Ammo[1] = '가슴';
+M_Ammo[2] = '머리';
+M_Ammo[3] = '다리';
+
 
 var TodayM = M_Map[daysSince%5] +" / "+M_Ammo[daysSince%4];
 
