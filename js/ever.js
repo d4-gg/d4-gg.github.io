@@ -69,12 +69,12 @@ if(month == '12')
 	if(date >= '22' && date <= '29'){
 			for (var i = 0; i < 11; i++) { 
 				ever_str = "<div class='card-main'><img src='"+w8_everImg[i]+"' width='40px'/> " + w8_everName[i]+"</div><hr/>"+ever_str;
-				ever_week = "2020년 12월 22일부터 29일까지";
+				ever_week = "2020년 12월 29일까지";
 			}
 	}else if(date >= '30'){
 			for (var i = 0; i < 11; i++) {
 				ever_str = "<div class='card-main'>" + w9_everName[i] +"</div><hr/>"+ever_str;
-				ever_week = "2020년 12월 30일부터 1월 5일까지";
+				ever_week = "2020년 1월 5일까지";
 			}
 		}
 }
@@ -84,7 +84,7 @@ if(month == '1')
 	if(date >= '1' && date <= '5'){
 		for (var i = 0; i < 11; i++) {
 			ever_str = "<div class='card-main'>" + w9_everName[i] +"</div><hr/>"+ever_str;
-			ever_week = "2020년 12월 30일부터 1월 5일까지";
+			ever_week = "2020년 1월 5일까지";
 		}
 	}
 }
