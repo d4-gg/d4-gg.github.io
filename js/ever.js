@@ -75,7 +75,7 @@ var day = d.getDay();  // 요일
 		//ever_week = "2020년 1월 5일까지";
 	}
 }
-if(daysSince2 <= '346'){ // 1주차: 주차별 +7하면 됨
+if(daysSince2 > '339' && daysSince2 <= '346'){ // 1주차: 주차별 +7하면 됨
 	for (var i = 0; i < 11; i++) {
 		ever_str = "<div class='card-main'><img src='"+w9_everImg[i]+"' width='40px'/> "  + w9_everName[i] +"</div><hr/>"+ever_str;
 		//ever_week = "2020년 1월 12일까지";
