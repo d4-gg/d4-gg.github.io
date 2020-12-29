@@ -9,20 +9,40 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
  <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <script type="text/javascript" src="./js/date.js"></script>
 <script type="text/javascript" src="./js/ever.js"></script>
+
 <body>
+<script type="text/javascript">
+var temp;
+
+function input(){
+var input = document.getElementById("input").value;
+location.href = "https://raid.report/xb/"+input;
+return true;
+
+}
+
+</script>
+
+
 <!-- partial:index.partial.html -->
+<div class="topnav">
+  <a class="active" href="#home"><font size="4"><b>데스티니 투데이</b></font></a>
+  <div class="search-container">
+      <input type="text" placeholder="수호자 전적 검색" id="input">
+      <button onclick="input()"><i class="fa fa-search"></i></button>
+
+  </div>
+</div>
 <br>
+
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			
-			<font size="4"><b>데스티니 투데이</b></font>
-			
 
 		</div>
 	</div><br>
