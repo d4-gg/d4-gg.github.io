@@ -57,6 +57,10 @@ function remaindTime() {
       $(".hours").html(hour);
       $(".minutes").html(min);
       $(".seconds").html(sec);
+	  
+	  if(hour = "00" && min == "00" && sec == "00"){
+		location.reload();
+	  }
    }
  }
  setInterval(remaindTime,1000);
