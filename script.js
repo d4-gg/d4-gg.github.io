@@ -16,7 +16,7 @@ $('.expander').click(function () {
 function remaindTime() {
     var now = new Date();
     var end = new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,2,00,00);
-    var open = new Date(now.getFullYear(),now.getMonth(),now.getDate(),09,00,00);
+    var open = new Date(now.getFullYear(),now.getMonth(),now.getDate(),02,00,00);
   
     var nt = now.getTime();
     var ot = open.getTime();

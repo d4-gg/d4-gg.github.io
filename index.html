@@ -4,14 +4,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Find Lost Sector</title>
+  <title>오늘의 데스티니</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet">
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
  <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
-</head>
-<script type="text/javascript" src="./js/date.js"></script>
 
+</head>
+
+<script type="text/javascript" src="./js/date.js"></script>
+<script type="text/javascript" src="./js/ever.js"></script>
 <body>
 <!-- partial:index.partial.html -->
 <br>
@@ -19,12 +21,11 @@
 	<div class="row">
 		<div class="col-lg-12">
 			
-			<font size="5"><b>오늘의 잊구</b></font>
+			<font size="4"><b>데스티니 투데이</b></font>
 			
 
 		</div>
 	</div><br>
-
 
 	<div class="row">
 		<div class="col-lg-12">
@@ -32,7 +33,7 @@
 				<div class="card-header">
 					<font size=3>
 					<b><script type="text/javascript">
-							document.write(year + '년 ' + month + '월 ' + date + '일 잊혀진 구역');
+							document.write("오늘의 잊혀진 구역 (" +year + '년 ' + month + '월 ' + date + '일)');
 						</script></b>
 					</font>
 				</div>
@@ -78,6 +79,32 @@
                 <span class="col">분</span>
                 <span class="seconds"></span>초 남음.
               </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+				 <font size=3><b>주간 에버버스 (<script type="text/javascript">
+							document.write(ever_week);
+						</script>)</b></font>
+				 <img src="https://www.bungie.net/pubassets/pkgs/114/114600/Eververse_Banner.jpg?cv=3983621215&av=725725405" width="100%">
+</div>
+<hr>
+				<div class="card-inner">
+						<script type="text/javascript">
+							document.write(ever_str);
+						</script>
+					
+					
+					<div class="card-footer">
+						<font size=2>
+							에버버스는 0시를 기준으로 변경됩니다. (게임상의 데이터와 차이가 있을 수 있습니다)</font>
 					</div>
 				</div>
 			</div>
