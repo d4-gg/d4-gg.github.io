@@ -73,7 +73,7 @@ if(month == '12')
 			}
 	}else if(date >= '30'){
 			for (var i = 0; i < 11; i++) {
-				ever_str = "<div class='card-main'>" + w9_everName[i] +"</div><hr/>"+ever_str;
+				ever_str = "<div class='card-main'><img src='"+w9_everImg[i]+"' width='40px'/> "  + w9_everName[i] +"</div><hr/>"+ever_str;
 				ever_week = "2020년 1월 5일까지";
 			}
 		}
@@ -83,7 +83,7 @@ if(month == '1')
 {
 	if(date >= '1' && date <= '5'){
 		for (var i = 0; i < 11; i++) {
-			ever_str = "<div class='card-main'>" + w9_everName[i] +"</div><hr/>"+ever_str;
+			ever_str = "<div class='card-main'><img src='"+w9_everImg[i]+"' width='40px'/> "  + w9_everName[i] +"</div><hr/>"+ever_str;
 			ever_week = "2020년 1월 5일까지";
 		}
 	}
