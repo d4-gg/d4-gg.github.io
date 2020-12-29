@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Today Find Lost Sector</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet"><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<script type="text/javascript">
+
+var initialDate = new Date(2020, 1, 1, 2); // Dec 1st 2012
+var now = Date.now();
+var difference = now - initialDate;
+var millisecondsPerDay = 24 * 60 * 60 * 1000;
+var daysSince = Math.floor(difference / millisecondsPerDay);
+
+var d = new Date();
+var arrL = []; 
+arrL[332] = '숨겨진 공허(가슴) - 유로파';
+arrL[333] = '벙커 E15 (머리)';
+arrL[334] = '파멸 (다리)';
+
+var arrM = []; 
+arrM[332] = '벨레스 미궁(팔) - 발사 기지';
+arrM[333] = '숨겨진 공허 (가슴)';
+arrM[334] = '벙커 E15 (머리)';
+
+var year = d.getFullYear(); // 년도
+var month = d.getMonth() + 1;  // 월
+var date = d.getDate();  // 날짜
+var day = d.getDay();  // 요일
+
+
+</script>
+<body>
+<!-- partial:index.partial.html -->
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			
+			<font size="5"><b>오늘의 잊구</b></font>
+		
+		</div>
+	</div><br>
+
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<font size=3>
+					<b><script type="text/javascript">
+							document.write(year + '년 ' + month + '월 ' + date + '일 잊혀진 구역');
+						</script></b>
+					</font>
+				</div>
+				<hr>
+				<div class="card-inner">
+				<div class="card-header">
+					<h2 class="card-title">
+						<script type="text/javascript">
+							document.write("[전설] " + arrL[daysSince]);
+						</script>
+					</h2>
+					<a href="#" class="pull-right"><i class="material-icons">play_arrow</i></a>
+				</div><hr>
+				<div class="card-header">
+					<h2 class="card-title">
+						<script type="text/javascript">
+							document.write("[마스터] " + arrM[daysSince]);
+						</script>
+					</h2>
+					<a href="#" class="pull-right"><i class="material-icons">play_arrow</i></a>
+			
+					</div>
+					<hr/>
+					<div class="card-footer">
+						<div class="time font40">
+			  구역 변경까지
+                <span class="hours"></span><span class="col">시간</span>
+                <span class="minutes"></span>
+                <span class="col">분</span>
+                <span class="seconds"></span>초 남음.
+              </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<font size=3>
+					<b>이 웹사이트는?</b>
+					</font>
+				</div>
+				<hr>
+				<div class="card-inner">
+					<div class="card-main">
+						XBOX로 데스티니를 즐기는 한 유저가 잊혀진 구역을 찾아 맵을 해매다 빡쳐서 만든 웹 사이트입니다.
+						매일 새벽 2시 다음 잊구로 자동 변경됩니다만 프로그램을 오랜 기간 테스트 하지 못해 일부 버그가 발생할 수 있습니다.
+						리스트 오른쪽의 재생 버튼은 추후에 가이드 영상을 링크 할 계획입니다.
+					</div>
+					<hr/>
+					<div class="card-footer">
+						<font size=2>Make by Xenophics KR / H2K / XBOX
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
