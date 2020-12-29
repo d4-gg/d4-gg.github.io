@@ -205,3 +205,4 @@ body {
     border: 1px solid #ccc;  
   }
 }
+input::placeholder { font-size: 80%; }
