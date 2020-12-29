@@ -1,3 +1,10 @@
+var initialDate2 = new Date(2020, 1, 1, 2); // Dec 1st 2012
+var now2 = Date.now();
+var difference2 = now2 - initialDate2;
+var millisecondsPerDay2 = 24 * 60 * 60 * 1000;
+var daysSince2 = Math.floor(difference2 / millisecondsPerDay2);		
+
+
 var w8_everName = []; 
 var w8_everImg = []; 
 
@@ -64,28 +71,17 @@ var month = d.getMonth() + 1;  // 월
 var date = d.getDate();  // 날짜
 var day = d.getDay();  // 요일
 
-if(month == '12')
-{
-	if(date >= '22' && date <= '29'){
-			for (var i = 0; i < 11; i++) { 
+if(daysSince2 <= '332'){ // 12월
+	for (var i = 0; i < 11; i++) { 
 				ever_str = "<div class='card-main'><img src='"+w8_everImg[i]+"' width='40px'/> " + w8_everName[i]+"</div><hr/>"+ever_str;
-				ever_week = "2020년 12월 29일까지";
+				//ever_week = "2020년 12월 29일까지";
 			}
-	}else if(date >= '30'){
-			for (var i = 0; i < 11; i++) {
+}
+else if(daysSince2 <= '339'){ // 1월 5일 9주차
+	for (var i = 0; i < 11; i++) {
 				ever_str = "<div class='card-main'><img src='"+w9_everImg[i]+"' width='40px'/> "  + w9_everName[i] +"</div><hr/>"+ever_str;
-				ever_week = "2020년 1월 5일까지";
+				//ever_week = "2020년 1월 5일까지";
 			}
-		}
 }
 
-if(month == '1')
-{
-	if(date >= '1' && date <= '5'){
-		for (var i = 0; i < 11; i++) {
-			ever_str = "<div class='card-main'><img src='"+w9_everImg[i]+"' width='40px'/> "  + w9_everName[i] +"</div><hr/>"+ever_str;
-			ever_week = "2020년 1월 5일까지";
-		}
-	}
-}
 
