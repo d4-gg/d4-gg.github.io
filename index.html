@@ -21,7 +21,10 @@ var temp;
 
 function input(){
 var input = document.getElementById("input").value;
-location.href = "https://raid.report/xb/"+input;
+if(input == null || input == ""){
+}else{
+	location.href = "https://raid.report/xb/"+input;
+}
 return true;
 
 }
@@ -31,9 +34,9 @@ return true;
 
 <!-- partial:index.partial.html -->
 <div class="topnav">
-  <a class="active" href="#home"><font size="4"><b>데스티니 투데이</b></font></a>
+  <a class="active" href="#home"><font size="3"><b>데스티니 투데이</b></font></a>
   <div class="search-container" >
-      <input type="text" style="width:150px" placeholder="전적 검색" id="input">
+      <input type="text" style="width:150px" placeholder="전적 검색(DRR)" id="input">
       <button onclick="input()"><i class="fa fa-search"></i></button>
 
   </div>
