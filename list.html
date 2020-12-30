@@ -32,24 +32,20 @@ return true;
 </script>
 
 <div class="topnav">
-  <a class="active" href="#home"><font size="3"><b>데스티니 투데이</b></font></a>
+  <a class="active" href="index.html"><font size="3"><b>데스티니 투데이</b></font></a>
   <div class="search-container" >
       <input type="text" style="width:155px" placeholder="레이드 전적 검색(DRR)" id="input">
       <button onclick="input()"><i class="fa fa-search"></i></button>
 
   </div>
 </div>
-
-<div class="container">
 	<div class="row">
-		<div class="col-lg-12">
-
-		</div>
-	</div><br>
-
-	<div class="row">
-		<div class="col-lg-12">
-				<div class="card">
+	<div class="tabmenu">
+  <ul>
+    <li id="tab1" class="btnCon"> <input type="radio" checked name="tabmenu" id="tabmenu1">
+      <label for="tabmenu1">전설</label>
+      <div class="tabCon" >
+			<div class="card">
 					<div class="card-header">
 						<font size=3>
 						<b>2020년 1월 전설 잊혀진 구역</b>
@@ -65,7 +61,13 @@ return true;
 							}
 						</script>		
 				</div><br>
-				<div class="card">
+	  </div>
+      
+    </li>
+    <li id="tab2" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu2">
+      <label for="tabmenu2">마스터</label>
+      <div class="tabCon" >
+	  <div class="card">
 					<div class="card-header">
 						<font size=3>
 						<b>2020년 1월 마스터 잊혀진 구역</b>
@@ -75,12 +77,27 @@ return true;
 					
 					<script type="text/javascript">
 							var a_date=1;
-							for(var i = 335; i < 362; i++){
+							for(var i = 335; i <= 365; i++){
 								document.write("<div class='card-header'>"+arrM[i]+"<br>2020년 1월"+a_date+"일</div><hr/>");
 								a_date++;
 							}
 						</script>		
 			</div>
+	  </div>
+    </li>    
+  </ul>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+
+		</div>
+	</div><br>
+
+
+		<div class="col-lg-12">
+			
+				
 			</div>
 		</div>
 	<br>
