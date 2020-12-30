@@ -240,7 +240,7 @@ ul{list-style:none;}
   padding: 20px;
   position:absolute;  
   left:0; top:40px; 
-  width:100%;
+  width:98%;
   box-sizing: border-box; 
 }
 .tabmenu input:checked ~ label{
