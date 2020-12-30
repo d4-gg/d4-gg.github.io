@@ -57,8 +57,11 @@ return true;
 							var a_date=1;
 							var lm_count = 0;
 							var lam_count = 0;
+							var week = ['일', '월', '화', '수', '목', '금', '토'];
 							for(var i = 1; i <= 31; i++){
-								document.write("<div class='card-header'>"+L_Map[lm_count]+" / "+L_Ammo[lam_count]+"<br>2020년 1월"+a_date+"일</div><hr/>");
+								var c_date ='2021-01-'+a_date;
+								var dayOfWeek = week[new Date(c_date).getDay()];
+								document.write("<div class='card-header'>"+L_Map[lm_count]+" / "+L_Ammo[lam_count]+"<br>2020년 1월"+a_date+" 일 ("+dayOfWeek+")</div><hr/>");
 								a_date++;
 								lm_count++;
 								lam_count++;
@@ -89,8 +92,11 @@ return true;
 							var a_date=1;
 							var lm_count = 0;
 							var lam_count = 0;
+							var week = ['일', '월', '화', '수', '목', '금', '토'];
 							for(var i = 1; i <= 31; i++){
-								document.write("<div class='card-header'>"+M_Map[lm_count]+" / "+M_Ammo[lam_count]+"<br>2020년 1월"+a_date+"일</div><hr/>");
+								var c_date ='2021-01-'+a_date;
+								var dayOfWeek = week[new Date(c_date).getDay()];
+								document.write("<div class='card-header'>"+M_Map[lm_count]+" / "+M_Ammo[lam_count]+"<br>2020년 1월"+a_date+" 일 ("+dayOfWeek+")</div><hr/>");
 								a_date++;
 								lm_count++;
 								lam_count++;
