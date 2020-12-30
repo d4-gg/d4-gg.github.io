@@ -72,7 +72,7 @@ var day = d.getDay();  // 요일
 
 var event_map = "";
 
-var event_list = [];
+var event_list = []; 
 event_list[0] = "엑소더스의 추락";
 event_list[1] = "유리길";
 event_list[2] = "실각한 자";

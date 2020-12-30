@@ -45,10 +45,9 @@ var month = d.getMonth() + 1;  // 월
 var date = d.getDate();  // 날짜
 var day = d.getDay();  // 요일
 
-
+ 
 var legeno_url = "a";
 var master_url = "a";
-var nightfall_url = "a";
 
 
 if(arrL[daysSince].includes("숨겨진")) {
