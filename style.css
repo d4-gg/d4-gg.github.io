@@ -238,7 +238,7 @@ ul{list-style:none;}
   display:none; 
   text-align:left; 
   padding: 20px;
-  position:absolute; 
+  position:absolute;  
   left:0; top:40px; 
   width:100%;
   box-sizing: border-box; 
