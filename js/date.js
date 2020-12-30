@@ -50,27 +50,27 @@ var legeno_url = "a";
 var master_url = "a";
 
 
-if(arrL[daysSince].includes("숨겨진")) {
+if(L_Map[daysSince%5].includes("숨겨진")) {
 	legeno_url = 'https://www.youtube.com/results?search_query=%EC%88%A8%EA%B2%A8%EC%A7%84+%EA%B3%B5%ED%97%88+%EA%B3%B5%EB%9E%B5';
-}else if(arrL[daysSince].includes("엑소더스")) {
+}else if(L_Map[daysSince%5].includes("엑소더스")) {
 	legeno_url =  'https://www.youtube.com/results?search_query=%EC%97%91%EC%86%8C%EB%8D%94%EC%8A%A4+%EC%A0%95%EC%9B%90+2a+%EA%B3%B5%EB%9E%B5';
-}else if(arrL[daysSince].includes("벨레스")) {
+}else if(L_Map[daysSince%5].includes("벨레스")) {
 	legeno_url =  'https://www.youtube.com/results?search_query=%EB%B2%A8%EB%A0%88%EC%8A%A4+%EB%AF%B8%EA%B6%81+%EA%B3%B5%EB%9E%B5';
-}else if(arrL[daysSince].includes("벙커")) {
+}else if(L_Map[daysSince%5].includes("벙커")) {
 	legeno_url =  'https://www.youtube.com/results?search_query=%EB%B2%99%EC%BB%A4E15+%EA%B3%B5%EB%9E%B5';
-}else if(arrL[daysSince].includes("파멸")) {
+}else if(L_Map[daysSince%5].includes("파멸")) {
 	legeno_url =  'https://www.youtube.com/results?search_query=%ED%8C%8C%EB%A9%B8+%EC%9E%8A%ED%98%80%EC%A7%84+%EA%B5%AC%EC%97%AD%EA%B3%B5%EB%9E%B5';
 }
 
-if(arrM[daysSince].includes("숨겨진")) {
+if(M_Map[daysSince%5].includes("숨겨진")) {
 	master_url = 'https://www.youtube.com/results?search_query=%EC%88%A8%EA%B2%A8%EC%A7%84+%EA%B3%B5%ED%97%88+%EA%B3%B5%EB%9E%B5';
-}else if(arrM[daysSince].includes("엑소더스")) {
+}else if(M_Map[daysSince%5].includes("엑소더스")) {
 	master_url =  'https://www.youtube.com/results?search_query=%EC%97%91%EC%86%8C%EB%8D%94%EC%8A%A4+%EC%A0%95%EC%9B%90+2a+%EA%B3%B5%EB%9E%B5';
-}else if(arrM[daysSince].includes("벨레스")) {
+}else if(M_Map[daysSince%5].includes("벨레스")) {
 	master_url =  'https://www.youtube.com/results?search_query=%EB%B2%A8%EB%A0%88%EC%8A%A4+%EB%AF%B8%EA%B6%81+%EA%B3%B5%EB%9E%B5';
-}else if(arrM[daysSince].includes("벙커")) {
+}else if(M_Map[daysSince%5].includes("벙커")) {
 	master_url =  'https://www.youtube.com/results?search_query=%EB%B2%99%EC%BB%A4E15+%EA%B3%B5%EB%9E%B5';
-}else if(arrM[daysSince].includes("파멸")) {
+}else if(M_Map[daysSince%5].includes("파멸")) {
 	master_url =  'https://www.youtube.com/results?search_query=%ED%8C%8C%EB%A9%B8+%EC%9E%8A%ED%98%80%EC%A7%84+%EA%B5%AC%EC%97%AD%EA%B3%B5%EB%9E%B5';
 }
 
