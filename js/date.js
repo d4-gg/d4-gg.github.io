@@ -48,6 +48,7 @@ var day = d.getDay();  // 요일
 
 var legeno_url = "a";
 var master_url = "a";
+var nightfall_url = "a";
 
 
 if(arrL[daysSince].includes("숨겨진")) {
@@ -73,3 +74,6 @@ if(arrM[daysSince].includes("숨겨진")) {
 }else if(arrM[daysSince].includes("파멸")) {
 	master_url =  'https://www.youtube.com/results?search_query=%ED%8C%8C%EB%A9%B8+%EC%9E%8A%ED%98%80%EC%A7%84+%EA%B5%AC%EC%97%AD%EA%B3%B5%EB%9E%B5';
 }
+
+
+							

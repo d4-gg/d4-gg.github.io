@@ -121,18 +121,21 @@ return true;
 				<div class="card-inner">
 					<div class="card-header">
 					<h2 class="card-title">
-						[황혼전] 유리 길
+						<script type="text/javascript">
+							document.write("[황혼전] " + event_map);
+						</script>
 					</h2>
+					<script type="text/javascript">
+					function nightfall(){
+						location.href = "https://www.youtube.com/results?search_query="+event_map+"%ED%99%A9%ED%98%BC%EC%A0%84";
+						return true;
+
+					}
+					</script>
+					<a href="#" onclick="nightfall()" class="pull-right"><i class="material-icons">play_arrow</i></a>
 					</div>
-					<hr/>
-					<div class="card-header">
-					<h2 class="card-title">
-						[엑소 시뮬레이션] 생존
-					</h2>
-					</div>
-					
-		
-					
+			
+			
 				</div>
 			</div>
 		</div>
