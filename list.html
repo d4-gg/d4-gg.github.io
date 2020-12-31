@@ -13,7 +13,12 @@
 </head>
 
 <script type="text/javascript" src="./js/date.js"></script>
-<script type="text/javascript" src="./js/ever.js"></script>
+<script type="text/javascript" src="./js/nightfall.js"></script>
+<script type="text/javascript" src="./js/weeklyEververse.js"></script>
+<script type="text/javascript" src="./data/hunt_list.json"></script>
+<script type="text/javascript" src="./data/nf_list.json"></script>
+<script type="text/javascript" src="./data/sector.json"></script>
+<script type="text/javascript" src="./data/exo_list.json"></script>
 
 <body style="overflow-x:hidden">
 <script type="text/javascript">
@@ -29,6 +34,13 @@ return true;
 
 }
 
+var nf_value = JSON.parse(nf_list);
+var exo_value = JSON.parse(exo_list);
+var hunt_value = JSON.parse(hunt_list);
+var l_sector_value = JSON.parse(l_sector_list);
+var m_sector_value = JSON.parse(m_sector_list);
+var l_ammo_value = JSON.parse(ammoL);
+var m_ammo_value = JSON.parse(ammoM);
 </script>
 
 <div class="topnav">
@@ -55,10 +67,13 @@ return true;
 					
 					<script type="text/javascript">
 							var a_date=1;
-							var lm_count = 3;
+							var lm_count = 0;
 							var lam_count = 3;
+							var week = ['일', '월', '화', '수', '목', '금', '토'];
 							for(var i = 1; i <= 31; i++){
-								document.write("<div class='card-header'>"+L_Map[lm_count]+" / "+L_Ammo[lam_count]+"<br>2020년 1월"+a_date+"일</div><hr/>");
+								var c_date ='2021-01-'+a_date;
+								var dayOfWeek = week[new Date(c_date).getDay()];
+								document.write("<div class='card-header'>"+l_sector_value[lm_count].map+" / "+l_ammo_value[lam_count].ammo+"<br> 2021년 1월"+a_date+"일("+dayOfWeek+")</div><hr/>");
 								a_date++;
 								lm_count++;
 								lam_count++;
@@ -87,13 +102,13 @@ return true;
 					
 					<script type="text/javascript">
 							var a_date=1;
-							var lm_count = 3;
+							var lm_count = 0;
 							var lam_count = 3;
 							var week = ['일', '월', '화', '수', '목', '금', '토'];
 							for(var i = 1; i <= 31; i++){
-								var c_date ='2020-01-'+a_date;
+								var c_date ='2021-01-'+a_date;
 								var dayOfWeek = week[new Date(c_date).getDay()];
-								document.write("<div class='card-header'>"+M_Map[lm_count]+" / "+M_Ammo[lam_count]+"<br>2020년 1월"+a_date+" 일("+dayOfWeek+")</div><hr/>");
+								document.write("<div class='card-header'>"+m_sector_value[lm_count].map+" / "+m_ammo_value[lam_count].ammo+"<br> 2021년 1월"+a_date+"일("+dayOfWeek+")</div><hr/>");
 								a_date++;
 								lm_count++;
 								lam_count++;
