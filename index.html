@@ -12,13 +12,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<script type="text/javascript" src="./data/hunt_list.json"></script>
-<script type="text/javascript" src="./data/nf_list.json"></script>
-<script type="text/javascript" src="./data/lsector.json"></script>
-<script type="text/javascript" src="./data/exo_list.json"></script>
 <script type="text/javascript" src="./js/date.js"></script>
 <script type="text/javascript" src="./js/ever.js"></script>
 <script type="text/javascript" src="./js/nightfall.js"></script>
+<script type="text/javascript" src="./data/hunt_list.json"></script>
+<script type="text/javascript" src="./data/nf_list.json"></script>
+<script type="text/javascript" src="./data/sector.json"></script>
+<script type="text/javascript" src="./data/exo_list.json"></script>
 
 <script type="text/javascript">
 var temp;
@@ -27,6 +27,9 @@ var nf_value = JSON.parse(nf_list);
 var exo_value = JSON.parse(exo_list);
 var hunt_value = JSON.parse(hunt_list);
 var l_sector_value = JSON.parse(l_sector_list);
+var m_sector_value = JSON.parse(m_sector_list);
+var l_ammo_value = JSON.parse(ammoL);
+var m_ammo_value = JSON.parse(ammoM);
 
 function input(){
 var input = document.getElementById("input").value;
@@ -37,12 +40,12 @@ if(input == null || input == ""){
 return true;
 }
 function legono(){
-	location.href = legeno_url;
+	location.href = "https://www.youtube.com/results?search_query="+l_sector_value[daysSince%5].map+"+%EA%B3%B5%EB%9E%B5";
 	return true;
 
 } 
 function master(){
-	location.href = master_url;
+	location.href = "https://www.youtube.com/results?search_query="+m_sector_value[daysSince%5].map+"+%EA%B3%B5%EB%9E%B5";
 	return true;
 }
 </script>
@@ -91,7 +94,7 @@ function master(){
 				<div class="card-header">
 					<h2 class="card-title">
 						<script type="text/javascript">
-							document.write("[전설] " + l_sector_value[daysSince%5].map);
+							document.write("[전설] " + l_sector_value[daysSince%5].map + " / " + l_ammo_value[daysSince%4].ammo);
 						</script>
 					</h2>
 					<a href="#" onclick="legono()" class="pull-right">
@@ -101,7 +104,7 @@ function master(){
 				<div class="card-header">
 					<h2 class="card-title">
 						<script type="text/javascript">
-							document.write("[마스터] " +TodayM);
+							document.write("[마스터] " + m_sector_value[daysSince%5].map+ " / " + m_ammo_value[daysSince%4].ammo);
 						</script>
 					</h2>
 					<a href="#" onclick="master()" class="pull-right"><i class="material-icons">play_arrow</i></a>
