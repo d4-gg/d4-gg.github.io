@@ -14,8 +14,8 @@
 </head>
 
 <script type="text/javascript" src="./js/date.js"></script>
-<script type="text/javascript" src="./js/ever.js"></script>
 <script type="text/javascript" src="./js/nightfall.js"></script>
+<script type="text/javascript" src="./js/weeklyEververse.js"></script>
 <script type="text/javascript" src="./data/hunt_list.json"></script>
 <script type="text/javascript" src="./data/nf_list.json"></script>
 <script type="text/javascript" src="./data/sector.json"></script>
@@ -89,7 +89,7 @@ function master(){
 					<font size=3>
 					<img src="./img/lost_sector_b.png" width="20px">
 					<b><script type="text/javascript">
-							document.write("오늘의 잊혀진 구역</B><BR>");
+							document.write("오늘의 잊혀진 구역</B><BR>" + uniqueArr[37]);
 						</script>		
 						<FONT SIZE=2>
 						<div class="time font40">
@@ -194,7 +194,7 @@ function master(){
 					
 					<div class="card-footer">
 						<font size=2>
-							에버버스는 매주 수요일 새벽 2시에 변경됩니다.(광휘 가루 목록만 표시)</font>
+							에버버스는 매주 수요일 새벽 2시에 변경됩니다.(웹데이터를 파싱 중이라 한글 변환 작업은 차주 중 진행됩니다.)</font>
 					</div>
 				</div>
 			</div>
