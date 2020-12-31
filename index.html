@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<script type="text/javascript" src="./data/hunt_list.json"></script>
 <script type="text/javascript" src="./data/nf_list.json"></script>
 <script type="text/javascript" src="./data/exo_list.json"></script>
 <script type="text/javascript" src="./js/date.js"></script>
@@ -21,6 +22,10 @@
 <script type="text/javascript">
 var temp;
 
+var nf_value = JSON.parse(nf_list);
+var exo_value = JSON.parse(exo_list);
+var hunt_value = JSON.parse(hunt_list);
+
 function input(){
 var input = document.getElementById("input").value;
 if(input == null || input == ""){
@@ -28,10 +33,16 @@ if(input == null || input == ""){
 	location.href = "https://raid.report/xb/"+input;
 }
 return true;
-
 }
-var nf_value = JSON.parse(nf_list);
-var exo_value = JSON.parse(exo_list);
+function legono(){
+	location.href = legeno_url;
+	return true;
+
+} 
+function master(){
+	location.href = master_url;
+	return true;
+}
 </script>
 
 
@@ -78,21 +89,9 @@ var exo_value = JSON.parse(exo_list);
 				<div class="card-header">
 					<h2 class="card-title">
 						<script type="text/javascript">
-							document.write("[전설] " + TodayL);
+							document.write("[전설] " + TodayL +"//"+W_No);
 						</script>
 					</h2>
-					<script type="text/javascript">
-					function legono(){
-						location.href = legeno_url;
-						return true;
-
-					}
-					function master(){
-						location.href = master_url;
-						return true;
-
-					}
-					</script>
 					<a href="#" onclick="legono()" class="pull-right">
 					
 					<i class="material-icons">play_arrow</i></a>
@@ -150,14 +149,30 @@ var exo_value = JSON.parse(exo_list);
 					</h2>
 					<script type="text/javascript">
 					function nightfall(){
-						location.href = "https://www.youtube.com/results?search_query="+nf_value[W_NF_VALUE].map+"%ED%99%A9%ED%98%BC%EC%A0%84";
+						location.href = "https://www.youtube.com/results?search_query="+exo_value[W_EXO_VALUE].map+"+%EC%97%91%EC%86%8C%EB%8F%84%EC%A0%84";
 						return true;
 
 					}
 					</script>
 					<a href="#" onclick="nightfall()" class="pull-right"><i class="material-icons">play_arrow</i></a>
 					</div>
-			
+					<hr>
+					<div class="card-header">
+					<h2 class="card-title">
+						<script type="text/javascript">
+							document.write("[제국 사냥] " + hunt_value[W_EXO_VALUE].map);
+						</script>
+					</h2>
+					<script type="text/javascript">
+					function nightfall(){
+						location.href = "https://www.youtube.com/results?search_query="+hunt_value[W_EXO_VALUE].map+"+%EC%A0%9C%EA%B5%AD%EC%82%AC%EB%83%A5";
+						return true;
+
+					}
+					</script>
+					<a href="#" onclick="nightfall()" class="pull-right"><i class="material-icons">play_arrow</i></a>
+					</div>
+					<hr>
 				</div>
 			</div>
 		</div>
