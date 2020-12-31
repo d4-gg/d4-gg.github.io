@@ -70,28 +70,16 @@ var date = d.getDate();  // 날짜
 var day = d.getDay();  // 요일
 
 
-var event_map = "";
-
-var event_list = []; 
-event_list[0] = "엑소더스의 추락";
-event_list[1] = "유리길";
-event_list[2] = "실각한 자";
-event_list[3] = "벌레 소굴";
-event_list[4] = "뒤집어진 첨탑";
-event_list[5] = "진홍빛 요새";
-
-var nightfall_url = "a";
-
  if(daysSince2 <= '339'){ // 1주차: 주차별 +7하면 됨
 	for (var i = 0; i < 11; i++) {
 		ever_str = "<div class='card-main'><img src='"+w8_everImg[i]+"' width='40px'/> "  + w8_everName[i] +"</div><hr/>"+ever_str;
-		event_map = event_list[1]; // 유리길
+	
 	}
 }
 if(daysSince2 > '339' && daysSince2 <= '346'){ // 2주차: 주차별 +7하면 됨
 	for (var i = 0; i < 11; i++) {
 		ever_str = "<div class='card-main'><img src='"+w9_everImg[i]+"' width='40px'/> "  + w9_everName[i] +"</div><hr/>"+ever_str;
-		event_map = event_list[2]; // 실각한 자
+		
 	}
 }
 

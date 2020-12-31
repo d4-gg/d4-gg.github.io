@@ -12,10 +12,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<script type="text/javascript" src="./data/nf_list.json"></script>
+<script type="text/javascript" src="./data/exo_list.json"></script>
 <script type="text/javascript" src="./js/date.js"></script>
 <script type="text/javascript" src="./js/ever.js"></script>
+<script type="text/javascript" src="./js/nightfall.js"></script>
 
-<body>
 <script type="text/javascript">
 var temp;
 
@@ -28,9 +30,12 @@ if(input == null || input == ""){
 return true;
 
 }
-
+var nf_value = JSON.parse(nf_list);
+var exo_value = JSON.parse(exo_list);
 </script>
 
+
+<body>
 
 <!-- partial:index.partial.html -->
 <div class="topnav">
@@ -54,7 +59,7 @@ return true;
 			<div class="card">
 				<div class="card-header">
 					<font size=3>
-					<img src="lost_sector_b.png" width="20px">
+					<img src="./img/lost_sector_b.png" width="20px">
 					<b><script type="text/javascript">
 							document.write("오늘의 잊혀진 구역</B><BR>");
 						</script>		
@@ -116,7 +121,7 @@ return true;
 		<div class="col-lg-12">
 			<div class="card" >
 				<div class="card-header">
-					<img src="llc.png" width="20px">
+					<img src="./img/llc.png" width="20px">
 				 <font size=3><b>주간 이벤트</b></font>
 			</div>
 <hr>
@@ -124,19 +129,34 @@ return true;
 					<div class="card-header">
 					<h2 class="card-title">
 						<script type="text/javascript">
-							document.write("[황혼전] " + event_map);
+							document.write("[황혼전] " + nf_value[W_NF_VALUE].map);
 						</script>
 					</h2>
 					<script type="text/javascript">
 					function nightfall(){
-						location.href = "https://www.youtube.com/results?search_query="+event_map+"%ED%99%A9%ED%98%BC%EC%A0%84";
+						location.href = "https://www.youtube.com/results?search_query="+nf_value[W_NF_VALUE].map+"%ED%99%A9%ED%98%BC%EC%A0%84";
 						return true;
 
 					}
 					</script>
 					<a href="#" onclick="nightfall()" class="pull-right"><i class="material-icons">play_arrow</i></a>
 					</div>
-			
+					<hr>
+					<div class="card-header">
+					<h2 class="card-title">
+						<script type="text/javascript">
+							document.write("[엑소 도전] " + exo_value[W_EXO_VALUE].map);
+						</script>
+					</h2>
+					<script type="text/javascript">
+					function nightfall(){
+						location.href = "https://www.youtube.com/results?search_query="+nf_value[W_NF_VALUE].map+"%ED%99%A9%ED%98%BC%EC%A0%84";
+						return true;
+
+					}
+					</script>
+					<a href="#" onclick="nightfall()" class="pull-right"><i class="material-icons">play_arrow</i></a>
+					</div>
 			
 				</div>
 			</div>
@@ -148,7 +168,7 @@ return true;
 		<div class="col-lg-12">
 			<div class="card">
 				<div class="card-header">
-					<img src="ev.jpg" width="20px">
+					<img src="./img/ev.jpg" width="20px">
 				 <font size=3><b>주간 에버버스</b></font>
 				 <div style="position: relative; bottom:-5px;">
 					<img src="https://www.bungie.net/pubassets/pkgs/114/114600/Eververse_Banner.jpg?cv=3983621215&av=725725405" width="100%">
