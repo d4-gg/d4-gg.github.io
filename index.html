@@ -31,7 +31,18 @@ var l_sector_value = JSON.parse(l_sector_list);
 var m_sector_value = JSON.parse(m_sector_list);
 var l_ammo_value = JSON.parse(ammoL);
 var m_ammo_value = JSON.parse(ammoM);
-
+function nightfall(){
+	location.href = "https://www.youtube.com/results?search_query="+nf_value[W_NF_VALUE].map+"%ED%99%A9%ED%98%BC%EC%A0%84";
+	return true;
+}
+function exo(){
+	location.href = "https://www.youtube.com/results?search_query="+exo_value[W_EXO_VALUE].map+"+%EC%97%91%EC%86%8C%EB%8F%84%EC%A0%84";
+	return true;
+}
+function hunt(){
+	location.href = "https://www.youtube.com/results?search_query="+hunt_value[W_EXO_VALUE].map+"+%EC%A0%9C%EA%B5%AD%EC%82%AC%EB%83%A5";
+	return true;
+}
 function input(){
 var input = document.getElementById("input").value;
 if(input == null || input == ""){
@@ -137,13 +148,6 @@ function master(){
 							document.write("[황혼전] " + nf_value[W_NF_VALUE].map);
 						</script>
 					</h2>
-					<script type="text/javascript">
-					function nightfall(){
-						location.href = "https://www.youtube.com/results?search_query="+nf_value[W_NF_VALUE].map+"%ED%99%A9%ED%98%BC%EC%A0%84";
-						return true;
-
-					}
-					</script>
 					<a href="#" onclick="nightfall()" class="pull-right"><i class="material-icons">play_arrow</i></a>
 					</div>
 					<hr>
@@ -153,14 +157,7 @@ function master(){
 							document.write("[엑소 도전] " + exo_value[W_EXO_VALUE].map);
 						</script>
 					</h2>
-					<script type="text/javascript">
-					function nightfall(){
-						location.href = "https://www.youtube.com/results?search_query="+exo_value[W_EXO_VALUE].map+"+%EC%97%91%EC%86%8C%EB%8F%84%EC%A0%84";
-						return true;
-
-					}
-					</script>
-					<a href="#" onclick="nightfall()" class="pull-right"><i class="material-icons">play_arrow</i></a>
+					<a href="#" onclick="exo()" class="pull-right"><i class="material-icons">play_arrow</i></a>
 					</div>
 					<hr>
 					<div class="card-header">
@@ -169,14 +166,8 @@ function master(){
 							document.write("[제국 사냥] " + hunt_value[W_EXO_VALUE].map);
 						</script>
 					</h2>
-					<script type="text/javascript">
-					function nightfall(){
-						location.href = "https://www.youtube.com/results?search_query="+hunt_value[W_EXO_VALUE].map+"+%EC%A0%9C%EA%B5%AD%EC%82%AC%EB%83%A5";
-						return true;
-
-					}
-					</script>
-					<a href="#" onclick="nightfall()" class="pull-right"><i class="material-icons">play_arrow</i></a>
+					
+					<a href="#" onclick="hunt()" class="pull-right"><i class="material-icons">play_arrow</i></a>
 					</div>
 					<hr>
 				</div>
