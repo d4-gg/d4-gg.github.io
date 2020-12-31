@@ -1,6 +1,6 @@
 
 /************ Start of Python Data *******************/
-
+document.write('<script type="text/javascript" src="/pyItemName.js" ></script>');
 const itemImg = ["<img src='https://www.bungie.net/common/destiny2_content/icons/eb5b56927321624ee0c065d6d31353ee.jpg' style='width: 40px; height: 40px;'/>",
  "<img src='https://www.bungie.net/common/destiny2_content/icons/753a1bf4731cb0966582dfe30f1bbb81.jpg' style='width: 40px; height: 40px;'/>",
  "<img src='https://www.bungie.net/common/destiny2_content/icons/84591e3c4a4682bf44d1f7155d05eac5.jpg' style='width: 40px; height: 40px;'/>",
@@ -407,14 +407,16 @@ var millisecondsPerDay2 = 24 * 60 * 60 * 1000;
 var daysSince2 = Math.floor(difference2 / millisecondsPerDay2);		
 var ever_str = "";
 
+var WEEK_OF_ITEMS = [18,19];
+
  if(daysSince2 <= '339'){ // 
-	for (var i = 18; i >= 0; i--) {
+	for (var i = WEEK_OF_ITEMS[0]; i >= 0; i--) {
 		ever_str = "<div class='card-main'>"+uniqueImgArr[i]+" "+ uniqueArr[i] +"</div><hr/>"+ever_str;
 	
 	}
 }
 if(daysSince2 > '339' && daysSince2 <= '346'){ // 2주차: 주차별 +7하면 됨
-	for (var i = 37; i >= 19; i--) {
+	for (var i = WEEK_OF_ITEMS[1]+WEEK_OF_ITEMS[0]; i > WEEK_OF_ITEMS[0]; i--) {
 		ever_str = "<div class='card-main'>"+uniqueImgArr[i]+" "+ uniqueArr[i] +"</div><hr/>"+ever_str;
 	}
 }
