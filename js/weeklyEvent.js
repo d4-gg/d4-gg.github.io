@@ -267,12 +267,6 @@ const itemPy = [
 
 
 
-const itemSet = new Set(itemPy);
-const itemImgSet = new Set(itemImg);
-
-const uniqueArr = [...itemSet];
-const uniqueImgArr = [...itemImgSet];
-
 /************ Python Data *******************/
 
 var initialDate2 = new Date(2020, 1, 1, 2); // Dec 1st 2012
@@ -283,30 +277,55 @@ var daysSince2 = Math.floor(difference2 / millisecondsPerDay2);
 var ever_str = "";
 
 var WEEK_OF_ITEMS_1 = 18;
-var WEEK_OF_ITEMS_2 = 37;
-var WEEK_OF_ITEMS_3 = 55 ;
-var W_EXO_VALUE =0;
+var WEEK_OF_ITEMS_2 = 40;
+var WEEK_OF_ITEMS_3 = 62;
+var WEEK_OF_ITEMS_4 = 84;
+var WEEK_OF_ITEMS_5 = 103;
+var WEEK_OF_ITEMS_6 = 128;
+var W_EXO_VALUE = 0;
 var W_NF_VALUE = 0;
 
- if(daysSince2 <= '339'){ // 
+ if(daysSince2 <= '339'){ //  1월 1주차
 	for (var i = WEEK_OF_ITEMS_1; i >= 0; i--) {
-		ever_str = "<div class='card-main'>"+uniqueImgArr[i]+" "+ uniqueArr[i] +"</div><hr/>"+ever_str;
-		W_EXO_VALUE = 2;
-		W_NF_VALUE = (daysSince2-7)%6
+		ever_str = "<div class='card-main'>"+itemImg[i]+" "+ itemPy[i] +"</div><hr/>"+ever_str;
+		
 	}
+	W_EXO_VALUE = 2;
+	W_NF_VALUE = 5;
 }
-else if(daysSince2 > '339' && daysSince2 <= '346'){
+else if(daysSince2 > '339' && daysSince2 <= '346'){ //  1월 2주차
 	for (var i = WEEK_OF_ITEMS_2; i > WEEK_OF_ITEMS_1; i--) {
-		ever_str = "<div class='card-main'>"+uniqueImgArr[i]+" "+ uniqueArr[i] +"</div><hr/>"+ever_str;
-		W_EXO_VALUE = 0;
-		W_NF_VALUE = (daysSince2-7)%6
+		ever_str = "<div class='card-main'>"+itemImg[i]+" "+ itemPy[i] +"</div><hr/>"+ever_str;
 	}
+	W_EXO_VALUE = 0;
+	W_NF_VALUE = 0;
 }
-else if(daysSince2 > '346' && daysSince2 <= '353'){
+else if(daysSince2 > '346' && daysSince2 <= '353'){ //  1월 3주차
 	for (var i = WEEK_OF_ITEMS_3; i > WEEK_OF_ITEMS_2; i--) {
-		ever_str = "<div class='card-main'>"+uniqueImgArr[i]+" "+ uniqueArr[i] +"</div><hr/>"+ever_str;
-		W_EXO_VALUE = 1;
-		W_NF_VALUE = (daysSince2-7)%6
+		ever_str = "<div class='card-main'>"+itemImg[i]+" "+ itemPy[i] +"</div><hr/>"+ever_str;
 	}
+	W_EXO_VALUE = 1;
+	W_NF_VALUE = 1;
+}
+else if(daysSince2 > '353' && daysSince2 <= '360'){ //  1월 4주차
+	for (var i = WEEK_OF_ITEMS_4; i > WEEK_OF_ITEMS_3; i--) {
+		ever_str = "<div class='card-main'>"+itemImg[i]+" "+ itemPy[i] +"</div><hr/>"+ever_str;
+	}
+	W_EXO_VALUE = 2;
+	W_NF_VALUE = 2;
+}
+else if(daysSince2 > '360' && daysSince2 <= '367'){ //  1월 5주차
+	for (var i = WEEK_OF_ITEMS_5; i > WEEK_OF_ITEMS_4; i--) {
+		ever_str = "<div class='card-main'>"+itemImg[i]+" "+ itemPy[i] +"</div><hr/>"+ever_str;
+	}
+	W_EXO_VALUE = 0;
+	W_NF_VALUE = 3;
 }
 
+else if(daysSince2 > '367' && daysSince2 <= '374'){ //  2월 데이터 끝
+	for (var i = WEEK_OF_ITEMS_6; i > WEEK_OF_ITEMS_5; i--) {
+		ever_str = "<div class='card-main'>"+itemImg[i]+" "+ itemPy[i] +"</div><hr/>"+ever_str;
+	}
+	W_EXO_VALUE = 1;
+	W_NF_VALUE = 4;
+}
