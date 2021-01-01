@@ -269,7 +269,7 @@ const itemPy = [
 
 /************ Python Data *******************/
 
-var initialDate2 = new Date(2020, 1, 1, 2); // Dec 1st 2012
+var initialDate2 = new Date(2020, 1, 1, 2); // 1st 2020
 var now2 = Date.now();
 var difference2 = now2 - initialDate2;
 var millisecondsPerDay2 = 24 * 60 * 60 * 1000;
