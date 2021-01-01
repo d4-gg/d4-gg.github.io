@@ -66,12 +66,15 @@ var m_ammo_value = JSON.parse(ammoM);
 					<hr>
 					
 					<script type="text/javascript">
+							var date = new Date();   
+
+							var year = date.getFullYear(); // 년도
 							var a_date=1;
 							var lm_count = 0;
 							var lam_count = 3;
 							var week = ['일', '월', '화', '수', '목', '금', '토'];
 							for(var i = 1; i <= 31; i++){
-								var c_date ='2021-01-'+a_date;
+								var c_date =year+'-01-'+a_date;
 								var dayOfWeek = week[new Date(c_date).getDay()];
 								document.write("<div class='card-header'>"+l_sector_value[lm_count].map+" / "+l_ammo_value[lam_count].ammo+"<br> 2021년 1월"+a_date+"일("+dayOfWeek+")</div><hr/>");
 								a_date++;
