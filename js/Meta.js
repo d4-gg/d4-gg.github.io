@@ -8,7 +8,7 @@ const pve_metaItems = [
 const pve_metaItemsImg = [
 "https://www.bungie.net/common/destiny2_content/icons/57185dba760340586551e016770d2856.jpg",
 "https://www.bungie.net/common/destiny2_content/icons/191270eda665bad75d610611cafab198.jpg",
-"https://www.bungie.net/common/destiny2_content/icons/e805ada80a07dccb6db9db71199ab273.jpg"
+"https://www.bungie.net/common/destiny2_content/icons/b03a9eda1da9844793d2a82f94d5e91e.jpg"
 ];
 
 const pvp_metaItems = [
