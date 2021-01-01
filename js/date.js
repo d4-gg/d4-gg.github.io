@@ -3,3 +3,4 @@ var now = Date.now();
 var difference = now - initialDate;
 var millisecondsPerDay = 24 * 60 * 60 * 1000;
 var daysSince = Math.floor(difference / millisecondsPerDay);
+

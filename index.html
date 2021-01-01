@@ -18,6 +18,7 @@
 
 <script type="text/javascript" src="./js/date.js"></script>
 <script type="text/javascript" src="./js/nightfall.js"></script>
+<script type="text/javascript" src="./js/Meta.js"></script>
 <script type="text/javascript" src="./js/weeklyEververse.js"></script>
 <script type="text/javascript" src="./data/hunt_list.json"></script>
 <script type="text/javascript" src="./data/nf_list.json"></script>
@@ -174,6 +175,45 @@ function master(){
 					<a href="#" onclick="hunt()" class="pull-right"><i class="material-icons">play_arrow</i></a>
 					</div>
 					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<!--- PVE 메타 -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<img src="./img/meta.png" width="20px">
+				 <font size=3><b>주간 PVE 메타</b></font>
+				
+</div>
+<hr>
+				<div class="card-inner">
+						<script type="text/javascript">
+							document.write(pve_meta_str);
+						</script>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<!--- PVP 메타 -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<img src="./img/osi.png" width="20px">
+				 <font size=3><b>주간 PVP 메타</b></font>
+				
+</div>
+<hr>
+				<div class="card-inner">
+						<script type="text/javascript">
+							document.write(pvp_meta_str);
+						</script>
 				</div>
 			</div>
 		</div>

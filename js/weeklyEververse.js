@@ -282,18 +282,24 @@ var millisecondsPerDay2 = 24 * 60 * 60 * 1000;
 var daysSince2 = Math.floor(difference2 / millisecondsPerDay2);		
 var ever_str = "";
 
-var WEEK_OF_ITEMS = [18,19];
+var WEEK_OF_ITEMS_1 = 18;
+var WEEK_OF_ITEMS_2 = WEEK_OF_ITEMS_1 + 19;
+var WEEK_OF_ITEMS_3 = WEEK_OF_ITEMS_2 + 18;
 
  if(daysSince2 <= '339'){ // 
-	for (var i = WEEK_OF_ITEMS[0]; i >= 0; i--) {
+	for (var i = WEEK_OF_ITEMS_1; i >= 0; i--) {
 		ever_str = "<div class='card-main'>"+uniqueImgArr[i]+" "+ uniqueArr[i] +"</div><hr/>"+ever_str;
-	
+		
 	}
 }
-if(daysSince2 > '339' && daysSince2 <= '346'){
-	for (var i = WEEK_OF_ITEMS[1]+WEEK_OF_ITEMS[0]; i > WEEK_OF_ITEMS[0]; i--) {
+else if(daysSince2 > '339' && daysSince2 <= '346'){
+	for (var i = WEEK_OF_ITEMS_2; i > WEEK_OF_ITEMS_1; i--) {
 		ever_str = "<div class='card-main'>"+uniqueImgArr[i]+" "+ uniqueArr[i] +"</div><hr/>"+ever_str;
 	}
 }
-
+else if(daysSince2 > '346' && daysSince2 <= '353'){
+	for (var i = WEEK_OF_ITEMS_3; i > WEEK_OF_ITEMS_2; i--) {
+		ever_str = "<div class='card-main'>"+uniqueImgArr[i]+" "+ uniqueArr[i] +"</div><hr/>"+ever_str;
+	}
+}
 
