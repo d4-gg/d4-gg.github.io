@@ -23,13 +23,7 @@ const pvp_metaItemsImg = [
 ];
  /************ End Item paser *******************/
 
-/************ Python Data *******************/
-
-var initialDate2 = new Date(2020, 1, 1, 2); // Dec 1st 2012
-var now2 = Date.now();
-var difference2 = now2 - initialDate2;
-var millisecondsPerDay2 = 24 * 60 * 60 * 1000;
-var daysSince2 = Math.floor(difference2 / millisecondsPerDay2);		
+/************ Python Data *******************/	
 var pve_meta_str = "";
 var pvp_meta_str = "";
 
