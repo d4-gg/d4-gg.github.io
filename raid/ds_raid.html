@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <meta charset="UTF-8">
+  <title>데스티니 투데이</title>
+  <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
+	<link rel="icon" href="./img/fav.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="../style.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<script type="text/javascript" src="../js/date.js"></script>
+<script type="text/javascript" src="../js/nightfall.js"></script>
+<script type="text/javascript" src="../js/Meta.js"></script>
+<script type="text/javascript" src="../js/weeklyEvent.js"></script>
+<script type="text/javascript" src="../data/hunt_list.json"></script>
+<script type="text/javascript" src="../data/nf_list.json"></script>
+<script type="text/javascript" src="../data/sector.json"></script>
+<script type="text/javascript" src="../data/exo_list.json"></script>
+
+<style>
+  .img_container {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
+</style>
+
+<script type="text/javascript">
+var temp;
+
+var nf_value = JSON.parse(nf_list);
+var exo_value = JSON.parse(exo_list);
+var hunt_value = JSON.parse(hunt_list);
+var l_sector_value = JSON.parse(l_sector_list);
+var m_sector_value = JSON.parse(m_sector_list);
+var l_ammo_value = JSON.parse(ammoL);
+var m_ammo_value = JSON.parse(ammoM);
+
+function nightfall(){
+	location.href = "https://www.youtube.com/results?search_query="+nf_value[W_NF_VALUE].map+"%ED%99%A9%ED%98%BC%EC%A0%84";
+	return true;
+}
+function exo(){
+	location.href = "https://www.youtube.com/results?search_query="+exo_value[W_EXO_VALUE].map+"+%EC%97%91%EC%86%8C%EB%8F%84%EC%A0%84";
+	return true;
+}
+function hunt(){
+	location.href = "https://www.youtube.com/results?search_query="+hunt_value[W_EXO_VALUE].map+"+%EC%A0%9C%EA%B5%AD%EC%82%AC%EB%83%A5";
+	return true;
+}
+function input(){
+var input = document.getElementById("input").value;
+if(input == null || input == ""){
+}else{
+	location.href = "https://raid.report/xb/"+input;
+}
+return true;
+}
+function legono(){
+	location.href = "https://www.youtube.com/results?search_query="+l_sector_value[daysSince%5].map+"+%EA%B3%B5%EB%9E%B5";
+	return true;
+
+} 
+function master(){
+	location.href = "https://www.youtube.com/results?search_query="+m_sector_value[daysSince%5].map+"+%EA%B3%B5%EB%9E%B5";
+	return true;
+}
+</script>
+
+
+<body>
+
+<!-- partial:index.partial.html -->
+<div class="topnav">
+  <a class="active" href="../index.html"><font size="3"><b>데스티니 투데이</b></font></a>
+  <div class="search-container" >
+      <input type="text" style="width:155px" placeholder="레이드 전적 검색(DRR)" id="input">
+      <button onclick="input()"><i class="fa fa-search"></i></button>
+
+  </div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+
+		</div>
+	</div><br>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<font size=3>
+					
+					<b>딥스톤 레이드 지도 (by vmwork)
+					</b>
+					</font>
+				</div>
+				<hr>
+				<div class="card-inner">
+					<div class="card-header">
+						<h2 class="card-title">
+							<b>1. 보안 우회</b>
+							<img src="./deep_img/1_top.png" width=100%><br>
+							<img src="./deep_img/1_bottom.png" width=100%>
+							<br>
+							<b>주요 공략</b><br>
+							스캐너는 1층에서 지하의 조작 패널 확인, 조작자는 페이즈별로 검/흰 나누어 내려가 스캐너가 불러준 패널 터치.
+							총 4개의 패널 터치 후 딜페이즈 시작, 중앙의 퓨즈 6개를 차단하면 끝
+						</h2>
+					</div>
+				</div>
+				<hr/>
+		
+			</div>
+		</div>
+	</div><br>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+		
+				<div class="card-inner">
+					<div class="card-header">
+						<h2 class="card-title">
+							<b>2. 아트락스-1</b>
+							<img src="./deep_img/2.png" width=100%><br>
+							<br>
+							<b>주요 공략</b><br>
+							스캐너, 조작 모두 획득 후 우주 층에서 스캐너로 진짜 파악 후 처리, 지구로 반납하고 지구 스캐너가 받아서
+							딜하는 것 반복 (페이즈별 아트락스 디버프는 바로 받아서 우주 조작자에게 제거 요청)
+						</h2>
+					</div>
+				</div>
+				<hr/>
+		
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+		
+				<div class="card-inner">
+					<div class="card-header">
+						<h2 class="card-title">
+							<b>3. 강하 생존</b>
+							<img src="./deep_img/3.png" width=100%><br>
+							<br>
+							<b>주요 공략</b><br>
+							사실상 2넴에서 빠진 체력 복구하는 네임드로 각 인원이 스캐너, 조작, 억압으로 나뉘어 증강 디버프만 확인하고
+							구슬 잘 넣어주면 끝. 스캐너는 잘 봐주면 되고 원자핵을 넣기 위해서 억업자는 각 드론(그림상 파란색)아래에서 타릭스를
+							한대씩 쳐서 타릭스가 기절하고 증강 비활성화를 만들어 줘야 함(조작자는 구슬 개수 조절에 신경 쓸 필요 있음)
+						</h2>
+					</div>
+				</div>
+				<hr/>
+		
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+		
+				<div class="card-inner">
+					<div class="card-header">
+						<h2 class="card-title">
+							<b>4. 괴인 타닉스 처치</b>
+							<img src="./deep_img/4.png" width=100%><br>
+							<br>
+							<b>주요 공략</b><br>
+							각 인원이 조작, 억압, 스캐너로 나뉘어 그림상 1,2번 지역에 조작팀이가고 3,4번 지역에 스캐너 그리고 5,6번 지역에
+							억압팀이 가서 각 지역에 나오는 잡몹을 잡으며 버프 획득.<br>
+							스캐너팀은 빠르게 원자 핵 상자 브리핑 후 상자가 없는 지역으로 빠르게 이동해야 함
+							(예: 상자가 1,3에 나왔다면 타닉스는 반드시 5,6번 지역으로 감.)<br>
+							타닉스가 이동하면 앞 다리 부터 제거해 원자핵을 빠르게 제거, 이후 떨어지는 즉사 스킬을 피하면서 스캐너가 불러준 상자에 원자핵 
+							넣고 다시 동일하게 한번 더 진행 딜페이즈로 돌입.
+						</h2>
+					</div>
+				</div>
+				<hr/>
+		
+			</div>
+		</div>
+	</div>
+	<br>
+</div>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
