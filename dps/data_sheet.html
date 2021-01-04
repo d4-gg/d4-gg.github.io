@@ -16,9 +16,13 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
   <link rel="stylesheet" href="../style.css"> <link rel="stylesheet" href="./data.css">
+<script type="text/javascript" src="./db.json"></script>
 </head>
 
+<script type="text/javascript">
+var item_db = JSON.parse(itemDb);
 
+</script>
 
 <body>
 
@@ -47,14 +51,17 @@
             <td>353,885 (79)</td>
           </tr>
         </tbody>
-		  <tbody>
-          <tr>
-            <td>하늘방화자의 맹세</td>
-            <td>2,642</td>
-            <td>2,965</td>
-            <td>213,480 (81)</td>
-          </tr>
-        </tbody>
+		<script type="text/javascript">
+			for(var i =0; i < item_db.length; i++){
+				document.write("<tbody><tr>");
+				document.write("<td>"+item_db[i].name+"</td>");
+				document.write("<td>"+item_db[i].avg+"</td>");
+				document.write("<td>"+item_db[i].bt+"</td>");
+				document.write("<td>"+item_db[i].tot+"</td>");
+				document.write("</tbody></tr>");
+			}
+		</script>			
+	
       </table>
     </div>
   </div>
