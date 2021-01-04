@@ -151,7 +151,7 @@ div.material-table .table-footer select {
 }
 
 div.material-table .table-title {
-  font-size: 20px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -191,7 +191,6 @@ div.material-table table th {
   vertical-align: middle;
   outline: none !important;
 }
-
 
 div.material-table table tbody tr:hover {
   background-color: #EEE;
