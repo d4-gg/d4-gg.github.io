@@ -151,12 +151,12 @@ div.material-table .table-footer select {
 }
 
 div.material-table .table-title {
-  font-size: 16px;
+  font-size: 14px;
   color: #000;
 }
 
 div.material-table table tr td {
-  padding: 0 0 0 0px;
+  padding: 0 0 0 14px;
   height: 48px;
   font-size: 11px;
   color: rgba(0, 0, 0, 0.87);
@@ -187,7 +187,7 @@ div.material-table table th {
   white-space: nowrap;
   padding: 0;
   height: 56px;
-  padding-left: 0px;
+  padding-left: 14px;
   vertical-align: middle;
   outline: none !important;
 }
