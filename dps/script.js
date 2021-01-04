@@ -189,7 +189,7 @@
 			      "sSearch": "",
 			      "sSearchPlaceholder": "Pesquisar",
 			      "sInfo": "_START_ -_END_ of _TOTAL_",
-			      "sLengthMenu": '<span>표시 데이터:</span><select class="browser-default">' +
+			      "sLengthMenu": '<span><font size=1>표시 데이터:</font></span><select class="browser-default">' +
 			        '<option value="10">10</option>' +
 			        '<option value="20">20</option>' +
 			        '<option value="30">30</option>' +

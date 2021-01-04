@@ -156,7 +156,7 @@ div.material-table .table-title {
 }
 
 div.material-table table tr td {
-  padding: 0 0 0 56px;
+  padding: 0 0 0 0px;
   height: 48px;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.87);
@@ -187,7 +187,7 @@ div.material-table table th {
   white-space: nowrap;
   padding: 0;
   height: 56px;
-  padding-left: 56px;
+  padding-left: 0px;
   vertical-align: middle;
   outline: none !important;
 }
@@ -233,7 +233,7 @@ div.material-table table tbody tr:hover {
 
 div.material-table table th:first-child,
 div.material-table table td:first-child {
-  padding: 0 0 0 24px;
+  padding: 0 0 0 10px;
 }
 
 div.material-table table th:last-child,
