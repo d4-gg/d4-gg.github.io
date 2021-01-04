@@ -187,9 +187,9 @@
 			  $('#datatable').dataTable({
 			    "oLanguage": {
 			      "sSearch": "",
-			      "sSearchPlaceholder": "Pesquisar",
-			      "sInfo": "_START_ -_END_ of _TOTAL_",
-			      "sLengthMenu": '<span><font size=1>표시 데이터:</font></span><select class="browser-default">' +
+			      "sSearchPlaceholder": "검색",
+			      "sInfo": "_START_ of _TOTAL_",
+			      "sLengthMenu": '<select class="browser-default">' +
 			        '<option value="10">10</option>' +
 			        '<option value="20">20</option>' +
 			        '<option value="30">30</option>' +
