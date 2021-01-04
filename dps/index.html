@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <meta charset="UTF-8">
+  <title>데스티니 투데이</title>
+  <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
+	<link rel="icon" href="./img/fav.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="../style.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<script type="text/javascript" src="../js/date.js"></script>
+<script type="text/javascript" src="../js/nightfall.js"></script>
+<script type="text/javascript" src="../js/Meta.js"></script>
+<script type="text/javascript" src="../js/weeklyEvent.js"></script>
+<script type="text/javascript" src="../data/hunt_list.json"></script>
+<script type="text/javascript" src="../data/nf_list.json"></script>
+<script type="text/javascript" src="../data/sector.json"></script>
+<script type="text/javascript" src="../data/exo_list.json"></script>
+
+<style>
+  .img_container {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
+</style>
+
+<script type="text/javascript">
+var temp;
+
+var nf_value = JSON.parse(nf_list);
+var exo_value = JSON.parse(exo_list);
+var hunt_value = JSON.parse(hunt_list);
+var l_sector_value = JSON.parse(l_sector_list);
+var m_sector_value = JSON.parse(m_sector_list);
+var l_ammo_value = JSON.parse(ammoL);
+var m_ammo_value = JSON.parse(ammoM);
+
+function nightfall(){
+	location.href = "https://www.youtube.com/results?search_query="+nf_value[W_NF_VALUE].map+"%ED%99%A9%ED%98%BC%EC%A0%84";
+	return true;
+}
+function exo(){
+	location.href = "https://www.youtube.com/results?search_query="+exo_value[W_EXO_VALUE].map+"+%EC%97%91%EC%86%8C%EB%8F%84%EC%A0%84";
+	return true;
+}
+function hunt(){
+	location.href = "https://www.youtube.com/results?search_query="+hunt_value[W_EXO_VALUE].map+"+%EC%A0%9C%EA%B5%AD%EC%82%AC%EB%83%A5";
+	return true;
+}
+function input(){
+var input = document.getElementById("input").value;
+if(input == null || input == ""){
+}else{
+	location.href = "https://raid.report/xb/"+input;
+}
+return true;
+}
+function legono(){
+	location.href = "https://www.youtube.com/results?search_query="+l_sector_value[daysSince%5].map+"+%EA%B3%B5%EB%9E%B5";
+	return true;
+
+} 
+function master(){
+	location.href = "https://www.youtube.com/results?search_query="+m_sector_value[daysSince%5].map+"+%EA%B3%B5%EB%9E%B5";
+	return true;
+}
+</script>
+
+
+<body>
+
+<!-- partial:index.partial.html -->
+<div class="topnav">
+  <a class="active" href="../index.html"><font size="3"><b>데스티니 투데이</b></font></a>
+  <div class="search-container" >
+      <input type="text" style="width:155px" placeholder="레이드 전적 검색(DRR)" id="input">
+      <button onclick="input()"><i class="fa fa-search"></i></button>
+
+  </div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+
+		</div>
+	</div><br>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<font size=3>
+					
+					<b>DPS database 란?
+					</b>
+					</font>
+				</div>
+				<hr>
+				<div class="card-inner">
+					<div class="card-header">
+							<font size=2>
+							DPS database는 각 무기 타입에 존재하는 프레임(경이 무기의 경우 독립적)의 DPS 값을 평균/버스트/최대값 및 최대값 도달 시간을 표기하고 있습니다. 모든 정보는 버프를 제외한 수치이며 수치가 높을 수록 무기가 좋다는 의미는 아니오니 참고 부탁드립니다.<br>
+							<br>
+							<b>Avg. </b> Avg.는 무기별 최대 탄창에 있는 탄약을 모두 사용했을 때의 DPS를 의미합니다. 첫 번째 탄창이 이미 장전되어 있고 마지막 탄창을 비울 때까지의 평균 값입니다. <br>
+							<b>Burst </b> Burst DPS는 1초당 총이 발사 할 수 있는 횟수 * 데미지의 값입니다. 버스트 데미지가 높을 수록 좋은 총일 수는 있습니다.<br>
+							<b>총 데미지(소요시간): </b> 총 데미지는 모든 탄약을 소비했을 때 넣을 수 있는 최대 데미지의 값입니다. (소요시간)은 모든 탄약을 소비하는데 장전하는 시간을 포함해 소비되는 시간을 의미합니다. (초 단위)<br>
+							</font>
+						
+					</div>
+					<hr>
+					
+				</div>
+				<hr/>
+		
+			</div>
+		</div>
+	</div><br>
+	<iframe src="./data_sheet.html" style="display:block; width:100%; height: 100vh;" frameBorder="0"></iframe>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+		
+				<div class="card-inner">
+					<div class="card-header">
+						<h2 class="card-title">
+							
+
+						</h2>
+					</div>
+				</div>
+				<hr>
+				
+		
+			</div>
+		</div>
+	</div>
+	<br>
+</div>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
