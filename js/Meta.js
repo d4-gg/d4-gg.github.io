@@ -30,7 +30,7 @@ var pvp_meta_str = "";
 const itemType = [
 	"물리",
 	"에너지",
-	"파워"
+	"중화기"
 ];
 
 
