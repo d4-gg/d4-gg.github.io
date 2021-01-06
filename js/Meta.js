@@ -1,12 +1,12 @@
 /************ Start paser *******************/
 
 const pve_metaItems = [
-	"한랭전선",
+	"일곱번째 세라프 카빈",
 	"이켈로스_SMG_v1.0.2",
 	"떨어지는 단두대"
 ];
 const pve_metaItemsImg = [
-  "https://www.bungie.net/common/destiny2_content/icons/7a72486e9c68369ee715380a3a525b13.jpg",
+  "https://titles.trackercdn.com/destiny/common/destiny2_content/icons/57185dba760340586551e016770d2856.jpg",
 "https://www.bungie.net/common/destiny2_content/icons/191270eda665bad75d610611cafab198.jpg",
 "https://www.bungie.net/common/destiny2_content/icons/b03a9eda1da9844793d2a82f94d5e91e.jpg"
 ];
