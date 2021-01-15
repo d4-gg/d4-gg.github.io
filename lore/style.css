@@ -438,7 +438,7 @@ a.button:hover, a.button:focus {
   position: absolute;
   top: 0;
   right: 15px;
-  width: calc(100% - 105px);
+  width: calc(100% - 65px);
   height: 100%;
   border-radius: 3px;
   box-shadow: 0 0 0 0 transparent;
@@ -505,8 +505,8 @@ a.button:hover, a.button:focus {
 }
 .bk-img .bk-wrapper {
   position: relative;
-  width: 84px;
-  height: 100px;
+  width: 64px;
+  height: 80px;
   float: left;
   z-index: 1;
   perspective: 1400px;
@@ -552,8 +552,8 @@ a.button:hover, a.button:focus {
 .bk-img .bk-front,
 .bk-img .bk-back,
 .bk-img .bk-front > div {
-  width: 84px;
-  height: 100px;
+  width: 64px;
+  height: 80px;
 }
 .bk-img .bk-left,
 .bk-img .bk-right {
@@ -578,11 +578,11 @@ a.button:hover, a.button:focus {
   box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
 }
 .bk-img .bk-left {
-  height: 100px;
+  height: 80px;
   transform: rotate3d(0, 1, 0, -90deg);
 }
 .bk-img .bk-left h2 {
-  width: 100px;
+  width: 80px;
   height: 40px;
   transform-origin: 0 0;
   transform: rotate(90deg) translateY(-40px);
