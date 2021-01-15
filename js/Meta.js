@@ -1,13 +1,13 @@
 /************ Start paser *******************/
 
 const pve_metaItems = [
-	"일곱 번째 세라프 카빈",
-	"영혼을 갉아먹는 허기",
+	"일곱번째 세라프 카빈",
+	"이켈로스_SMG_v1.0.2",
 	"떨어지는 단두대"
 ];
 const pve_metaItemsImg = [
-"https://www.bungie.net/common/destiny2_content/icons/57185dba760340586551e016770d2856.jpg",
-"https://www.bungie.net/common/destiny2_content/icons/c4509acb76551495deac51bb29b61248.jpg",
+  "https://titles.trackercdn.com/destiny/common/destiny2_content/icons/57185dba760340586551e016770d2856.jpg",
+"https://www.bungie.net/common/destiny2_content/icons/191270eda665bad75d610611cafab198.jpg",
 "https://www.bungie.net/common/destiny2_content/icons/b03a9eda1da9844793d2a82f94d5e91e.jpg"
 ];
 
@@ -30,7 +30,7 @@ var pvp_meta_str = "";
 const itemType = [
 	"물리",
 	"에너지",
-	"파워"
+	"중화기"
 ];
 
 
