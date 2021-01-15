@@ -23,7 +23,7 @@ body,
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #313131;
-  background: #efefef;
+  background: #ffffff;
 }
 
 .row {
@@ -106,7 +106,7 @@ a.button:hover, a.button:focus {
   margin-bottom: 55px;
   width: 100%;
   border-bottom: 1px solid #d2d6d5;
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 
 .main-logo {
