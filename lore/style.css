@@ -23,7 +23,7 @@ body,
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #313131;
-  background: #ffffff;
+  background: #ecf0f1;
 }
 
 .row {
@@ -42,7 +42,7 @@ li {
 }
 
 a {
-  color: #000000;
+  color: #219e9a;
 }
 
 h2,
@@ -95,7 +95,7 @@ a.button {
   background-color: rgba(49, 49, 49, 0.5);
 }
 a.button:hover, a.button:focus {
-  background-color: #000000;
+  background-color: #219e9a;
 }
 
 /*
@@ -106,7 +106,7 @@ a.button:hover, a.button:focus {
   margin-bottom: 55px;
   width: 100%;
   border-bottom: 1px solid #d2d6d5;
-  background-color: #f6f6f6;
+  background-color: #fff;
 }
 
 .main-logo {
@@ -211,7 +211,7 @@ a.button:hover, a.button:focus {
   margin-top: 2px;
   width: 100%;
   height: calc(100% - 10px);
-  border-bottom: 3px solid #000000;
+  border-bottom: 3px solid #219e9a;
   transform: translate3d(-100%, 0, 0);
   transition: transform 0.3s;
 }
@@ -328,7 +328,7 @@ a.button:hover, a.button:focus {
   visibility: visible;
   width: 300px;
   height: 100%;
-  background: #000000;
+  background: #219e9a;
   transition: all 0.5s;
   transform: translate3d(100%, 0, 0);
 }
@@ -419,9 +419,9 @@ a.button:hover, a.button:focus {
 }
 .toolbar a.filter-item.active {
   padding-bottom: 15px;
-  color: #000000;
+  color: #219e9a;
   font-weight: bold;
-  border-bottom: 3px solid #000000;
+  border-bottom: 3px solid #219e9a;
 }
 
 #grid {
@@ -438,7 +438,7 @@ a.button:hover, a.button:focus {
   position: absolute;
   top: 0;
   right: 15px;
-  width: 100%;
+  width: calc(100% - 105px);
   height: 100%;
   border-radius: 3px;
   box-shadow: 0 0 0 0 transparent;
@@ -454,7 +454,7 @@ a.button:hover, a.button:focus {
   box-shadow: 0px 0px 10px 0px rgba(49, 49, 49, 0.25);
 }
 .book-item:hover a.button {
-  background-color: #000000;
+  background-color: #219e9a;
 }
 .book-item:hover .bk-bookdefault {
   transform: rotate3d(0, 1, 0, 25deg);
@@ -505,8 +505,8 @@ a.button:hover, a.button:focus {
 }
 .bk-img .bk-wrapper {
   position: relative;
-  width: 150px;
-  height: 215px;
+  width: 84px;
+  height: 100px;
   float: left;
   z-index: 1;
   perspective: 1400px;
@@ -517,7 +517,7 @@ a.button:hover, a.button:focus {
 .bk-img .bk-book {
   position: absolute;
   width: 100%;
-  height: 215px;
+  height: 100px;
   transform-style: preserve-3d;
   transition: transform 0.5s;
 }
@@ -552,8 +552,8 @@ a.button:hover, a.button:focus {
 .bk-img .bk-front,
 .bk-img .bk-back,
 .bk-img .bk-front > div {
-  width: 150px;
-  height: 215px;
+  width: 84px;
+  height: 100px;
 }
 .bk-img .bk-left,
 .bk-img .bk-right {
@@ -578,11 +578,11 @@ a.button:hover, a.button:focus {
   box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
 }
 .bk-img .bk-left {
-  height: 215px;
+  height: 100px;
   transform: rotate3d(0, 1, 0, -90deg);
 }
 .bk-img .bk-left h2 {
-  width: 215px;
+  width: 100px;
   height: 40px;
   transform-origin: 0 0;
   transform: rotate(90deg) translateY(-40px);
@@ -599,7 +599,6 @@ a.button:hover, a.button:focus {
   left: 10px;
   bottom: 0;
   width: 3px;
-  background: rgba(0, 0, 0, 0.06);
   box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
 }
 .bk-img .bk-cover {
@@ -608,7 +607,7 @@ a.button:hover, a.button:focus {
 }
 .bk-img .bk-front > div,
 .bk-img .bk-left {
-  background-color: #000000;
+
 }
 
 /*
