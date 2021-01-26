@@ -1,66 +1,229 @@
+// Get Color Attribute
+// Set the background book color
+$("li.book-item").each(function() {
+  var $this = $(this);
+
+  $this.find(".bk-front > div").css('background-color', $(this).data("color"));
+  $this.find(".bk-left").css('background-color', $(this).data("color"));
+  $this.find(".back-color").css('background-color', $(this).data("color"));
+
+  $this.find(".item-details a.button").on('click', function() {
+   // displayBookDetails($this);
+  });
+});
+
+function displayBookDetails(el) {
+  var $this = $(el);
+  $('.main-container').addClass('prevent-scroll');
+  $('.main-overlay').fadeIn();
+
+  $this.find('.overlay-details').clone().prependTo('.main-overlay');
+
+  $('a.close-overlay-btn').on('click', function(e) {
+    e.preventDefault();
+    $('.main-container').removeClass('prevent-scroll');
+    $('.main-overlay').fadeOut();
+    $('.main-overlay').find('.overlay-details').remove();
+  });
+
+  $('.main-overlay a.preview').on('click', function() {
+    $('.main-overlay .overlay-desc').toggleClass('activated');
+    $('.main-overlay .overlay-preview').toggleClass('activated');
+  });
+
+  $('.main-overlay a.back-preview-btn').on('click', function() {
+    $('.main-overlay .overlay-desc').toggleClass('activated');
+    $('.main-overlay .overlay-preview').toggleClass('activated');
+  });
+}
+
 /*
- * TheaterJS, a typing effect mimicking human behavior.
- *
- * Github repository: 
- * https://github.com/Zhouzi/TheaterJS
- *
+ *  Offcanvas Menu
+ */
+// Open Offcanvas Menu
+$('.main-navigation a').on('click', function() {
+  $('.main-container').addClass('nav-menu-open');
+  $('.main-overlay').fadeIn();
+});
+
+// Close Offcanvas Menu
+$('.overlay-full').on('click', function() {
+  $('.main-container').removeClass('nav-menu-open');
+  $('.main-container').removeClass('prevent-scroll');
+  $(this).parent().fadeOut();
+  $(this).parent().find('.overlay-details').remove();
+});
+
+/*
+ *  Shuffle.js for Search, Catagory filter and Sort
  */
 
-var theater = theaterJS({ erase: 450})
+// Initiate Shuffle.js
+var Shuffle = window.shuffle;
 
-theater
-  .on('type:start, erase:start', function () {
-    theater.getCurrentActor().$element.classList.add('actor__content--typing')
-  })
-  .on('type:end, erase:end', function () {
-    theater.getCurrentActor().$element.classList.remove('actor__content--typing')
-  })
-  .on('type:start, erase:start', function () {
-    if (theater.getCurrentActor().name === 'tell1') {
-      document.body.classList.add('dark')
+var bookList = function(element) {
+  this.element = element;
+
+  this.shuffle = new Shuffle(element, {
+    itemSelector: '.book-item',
+  });
+
+  this._activeFilters = [];
+  this.addFilterButtons();
+  this.addSorting();
+  this.addSearchFilter();
+  this.mode = 'exclusive';
+};
+
+bookList.prototype.toArray = function(arrayLike) {
+  return Array.prototype.slice.call(arrayLike);
+};
+
+// Catagory Filter Functions
+// Toggle mode for the Catagory filters
+bookList.prototype.toggleMode = function() {
+  if (this.mode === 'additive') {
+    this.mode = 'exclusive';
+  } else {
+    this.mode = 'additive';
+  }
+};
+
+// Filter buttons eventlisteners
+bookList.prototype.addFilterButtons = function() {
+  var options = document.querySelector('.filter-options');
+  if (!options) {
+    return;
+  }
+  var filterButtons = this.toArray(options.children);
+
+  filterButtons.forEach(function(button) {
+    button.addEventListener('click', this._handleFilterClick.bind(this), false);
+  }, this);
+};
+
+// Function for the Catagory Filter
+bookList.prototype._handleFilterClick = function(evt) {
+  var btn = evt.currentTarget;
+  var isActive = btn.classList.contains('active');
+  var btnGroup = btn.getAttribute('data-group');
+
+  if (this.mode === 'additive') {
+    if (isActive) {
+      this._activeFilters.splice(this._activeFilters.indexOf(btnGroup));
     } else {
-     document.body.classList.add('dark')
+      this._activeFilters.push(btnGroup);
     }
-  })
 
-theater
-  .addActor('tell1', { speed: 0.7 , accuracy: 0.7 })
-  .addActor('tell1', { speed: 0.7 , accuracy: 0.7 })
-  .addScene('tell1:히무라 시노부의 일기', 1000)
-  .addScene('tell1:이전 일지는 삭제했다. 그것에 대해 할 말은..죽는 것보다 무서운 건, 이 벽 속에서 죽어가는 것뿐이다.', 1000)
-  .addScene('tell1:하지만 난 조국에 약속했다.', 1000)
-  .addScene('tell1:오늘 새 수호자 3명을 문으로 데리고 갔다. 그들 중 두 명은 파란색이었다. 진짜 파란색이었다.', 1000)
-  .addScene('tell1:눈을 뗄 수가 없었다. 이름은 테린 바이, 나디야였다. 세 번째는 엑소, 리-4였다.', 1000)
-  .addScene('tell1:테린은 내가 쳐다보는 걸 알고 웃었다. "이런 미남은 처음 보지?"', 1000)
-  .addScene('tell1:"파란색 사람을 보는 게 처음인 거야" 내가 말했다..', 600)
-  .addScene('tell1:테린은 각성자에 대해 설명하려 했다. 하지만 그다지 많이 알지는 못했다. 수호자가 된 이후의 일은 기억을 하지 못했던 것이다.', 1000)
-  .addScene('tell1:그럼 수호자는 어떻게 이름을 정하는 건데? 내가 물었다. 테린이 설명하길, 엑소 수호자는 대개 이름을 기억하지만 다른 수호자들은 그렇지 않다고 한다.', 1000)
-  .addScene('tell1:각성자와 인간 수호자는 아무것도 기억을 못 해서 새 이름을 정한다고 한다.', 1000)
-  .addScene('tell1:그리고는 "멋있잖아! 테린 바이라는 이름을 잘 기억해 두라구. 잃어버린 전쟁지능 라스푸틴을 찾을 수호자의 이름이니까!"라고 말했다', 1000)
-  .addScene('tell1:테린이 그렇게 말할 때 리-4는 질린 듯이 보였다. 엑소치고는 인상적인 표정이었다.', 1000)
-  .addScene('tell1:테린이 라수프틴과 바이코누르에 대해 한동안 얘기를 늘어놓았기 때문에 나는 화제를 돌리기 위해 나디야에게 이름을 어떻게 정했는지를 물었다. ', 1000)
-  .addScene('tell1:하지만 그녀는 눈만 돌릴 뿐이었다. "미카가 수다 떨라고 돈 주는 게 아니라서."', 1000)
-  .addScene('tell1:"돈을 받는다고?" 테린이 말했다.', 1000)
-  .addScene('tell1:리-4가 팔꿈치로 테린을 툭 쳤다.', 1000)
-  .addScene('tell1:"아우! 왜 쳐?"', 1000)
-  .addScene('tell1:"우리가 여기 온 이유를 기억나게 해 주려고." 리-4가 말했다.', 1000)
-  .addScene('tell1:그때 그녀의 목소리를 처음으로 들었다.', 1000)
-  .addScene('tell1:"여기 왜 온 건데?" 내가 물었다.', 1000)
-  .addScene('tell1:그녀는 전기 장치로 된 눈으로 나를 빤히 쳐다보았다. "오래된 빚이 있거든."', 1000)
-  .addScene('tell1:"미카한테?"', 1000)
-  .addScene('tell1:"아니."', 1000)
-  .addScene('tell1:나디야는 문 난간에 기대고 머리를 비스듬하게 뒤로 돌렸다. ', 1000)
-  .addScene('tell1:잠시 그녀를 밀어서 넘어뜨려 버릴까도 생각했다. ', 1000)
-  .addScene('tell1:"어쨌든 행운을 빌어." 나디야가 말했다.', 1000)
-  .addScene('tell1:"오래된 빚 따윈 관심 없어. 다른 사람이 나한테 빚을 지는 게 좋지."', 1000)
-  .addScene('tell1:그때 리-4가 어깨에 멘 저격총을 전광석화같이 뽑아 들었다. ', 1000)
-  .addScene('tell1:총이 나디야의 머리를 후려갈길 뻔했다.', 1000)
-  .addScene('tell1:리-4는 조준경을 눈에 맞추더니 총열을 벽에 붙이지도 않고 한 치의 흔들림도 없이 무기를 들었다. ', 1000)
-  .addScene('tell1:나디야의 궁시렁거림 외에는 아무 소리도 들리지 않았다.', 1000)
-  .addScene('tell1:이윽고 리가 총을 쏘았다.', 1000)
-  .addScene('tell1:멀리 수평선에서 그림자 하나가 쓰러졌다.', 1000)
-  .addScene('tell1:"몰락자야?" 테린이 말했다.', 1000)
-  .addScene('tell1:"왕이야." 리가 확인했다.', 1000)
+    btn.classList.toggle('active');
+    this.shuffle.filter(this._activeFilters);
 
-  
- 
+  } else {
+    this._removeActiveClassFromChildren(btn.parentNode);
+
+    var filterGroup;
+    if (isActive) {
+      btn.classList.remove('active');
+      filterGroup = Shuffle.ALL_ITEMS;
+    } else {
+      btn.classList.add('active');
+      filterGroup = btnGroup;
+    }
+
+    this.shuffle.filter(filterGroup);
+  }
+};
+
+// Remove classes for active states
+bookList.prototype._removeActiveClassFromChildren = function(parent) {
+  var children = parent.children;
+  for (var i = children.length - 1; i >= 0; i--) {
+    children[i].classList.remove('active');
+  }
+};
+
+// Sort By
+// Watching for the select box to change to run
+bookList.prototype.addSorting = function() {
+  var menu = document.querySelector('.sort-options');
+  if (!menu) {
+    return;
+  }
+  menu.addEventListener('change', this._handleSortChange.bind(this));
+};
+
+// Sort By function Handler runs on change
+bookList.prototype._handleSortChange = function(evt) {
+  var value = evt.target.value;
+  var options = {};
+
+  function sortByDate(element) {
+    return element.getAttribute('data-created');
+  }
+
+  function sortByTitle(element) {
+    return element.getAttribute('data-title').toLowerCase();
+  }
+
+  if (value === 'date-created') {
+    options = {
+      reverse: true,
+      by: sortByDate,
+    };
+  } else if (value === 'title') {
+    options = {
+      by: sortByTitle,
+    };
+  }
+
+  this.shuffle.sort(options);
+};
+
+// Searching the Data-attribute Title
+// Advanced filtering
+// Waiting for input into the search field
+bookList.prototype.addSearchFilter = function() {
+  var searchInput = document.querySelector('.shuffle-search');
+  if (!searchInput) {
+    return;
+  }
+  searchInput.addEventListener('keyup', this._handleSearchKeyup.bind(this));
+};
+
+// Search function Handler to search list
+bookList.prototype._handleSearchKeyup = function(evt) {
+  var searchInput = document.querySelector('.shuffle-search');
+  var searchText = evt.target.value.toLowerCase();
+
+  // Check if Search input has value to toggle class
+  if (searchInput && searchInput.value) {
+    $('.catalog-search').addClass('input--filled');
+  } else {
+    $('.catalog-search').removeClass('input--filled');
+  }
+
+  this.shuffle.filter(function(element, shuffle) {
+
+    // If there is a current filter applied, ignore elements that don't match it.
+    if (shuffle.group !== Shuffle.ALL_ITEMS) {
+      // Get the item's groups.
+      var groups = JSON.parse(element.getAttribute('data-groups'));
+      var isElementInCurrentGroup = groups.indexOf(shuffle.group) !== -1;
+
+      // Only search elements in the current group
+      if (!isElementInCurrentGroup) {
+        return false;
+      }
+    }
+
+    var titleElement = element.querySelector('.book-item_title');
+    var titleText = titleElement.textContent.toLowerCase().trim();
+
+    return titleText.indexOf(searchText) !== -1;
+  });
+};
+
+// Wait till dom load to start the Shuffle js funtionality
+document.addEventListener('DOMContentLoaded', function() {
+  window.book_list = new bookList(document.getElementById('grid'));
+});
