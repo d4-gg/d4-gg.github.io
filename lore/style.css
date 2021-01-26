@@ -93,7 +93,8 @@ a.button {
   padding: 8px 14px;
   font-size: 14px;
   border-radius: 3px;
-  background-color: #fff;color:#222;
+  background-color: #3a3a3a;
+  color:#878787;
 }
 a.button:hover, a.button:focus {
   background-color: #ededed;
