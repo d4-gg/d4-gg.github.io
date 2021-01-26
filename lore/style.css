@@ -1,4 +1,4 @@
-@import '//fonts.googleapis.com/css?family=Cutive';
+
 *,
 *:before,
 *:after {
@@ -18,7 +18,7 @@ html {
 }
 
 body {
- font-family: 'Nanum Myeongjo', serif;
+ font-family: 'Nanum Myeongjo';
   font-size: 1rem;
   line-height: 1.4;
   color: #222;
