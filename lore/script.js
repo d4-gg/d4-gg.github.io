@@ -61,7 +61,6 @@ theater
   .addScene('tell1:멀리 수평선에서 그림자 하나가 쓰러졌다.', 1000)
   .addScene('tell1:"몰락자야?" 테린이 말했다.', 1000)
   .addScene('tell1:"왕이야." 리가 확인했다.', 1000)
-  .addScene('tell1:', 1000)
-  .addScene('tell1:', 1000)
-  .addScene(theater.replay.bind(theater))
+
   
+ 
