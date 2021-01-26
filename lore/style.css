@@ -93,7 +93,7 @@ a.button {
   padding: 8px 14px;
   font-size: 14px;
   border-radius: 3px;
-  background-color: rgba(49, 49, 49, 0.5);
+  background-color: #fff;color:#222;
 }
 a.button:hover, a.button:focus {
   background-color: #ededed;
