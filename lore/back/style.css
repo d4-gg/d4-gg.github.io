@@ -588,7 +588,6 @@ a.button:hover, a.button:focus {
   transform: rotate(90deg) translateY(-40px);
 }
 .bk-img .bk-cover {
-  /*background-image: url(../images/1.png);*/
   background-repeat: no-repeat;
   background-position: 10px 40px;
 }
