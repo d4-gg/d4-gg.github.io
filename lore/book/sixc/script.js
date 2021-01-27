@@ -25,7 +25,6 @@ theater
 
 theater
   .addActor('tell1', { speed: 0.8 })
-  .addActor('tell1', { speed: 0.8 , accuracy: 0.7 })
     .addScene('tell1:히무라 시노부의 일기', 850)
   .addScene('tell1:이전 일지는 삭제했다. 그것에 대해 할 말은..죽는 것보다 무서운 건, 이 벽 속에서 죽어가는 것뿐이다.', 850)
   .addScene('tell1:하지만 난 조국에 약속했다.', 850)
