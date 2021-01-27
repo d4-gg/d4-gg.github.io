@@ -6,15 +6,28 @@
 
   <title>지식:강압과 탈출</title>
   <link rel="stylesheet" href="/lore/book/normalize.min.css">
-<link rel="stylesheet" href="/lore/book/style.css"><link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="../../style.css"><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<script type="text/javascript">
+//<![CDATA[
+function clickshow(elem,ID) {
+ var menu = document.getElementById(ID);
+ if (elem.className !='closed') {
+    elem.className = 'closed';
+    menu.style.display = "none";
+ } else {
+    elem.className ='opened';
+    menu.style.display ="block";
+}}
+//]]>
+</script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 
 <main class="scene">
 
-<a href=#none id="show" onclick="if(hide.style.display=='none') {hide.style.display='';show.innerText='[목차]'} else {hide.style.display='none';show.innerText='[목차]'}">[목차]</a> 슬론: 방파제<p>
+<a href=#none id="show" onclick="if(hide.style.display=='none') {hide.style.display='';show.innerText='[목차]'} else {hide.style.display='none';show.innerText='[목차]'}">[목차]</a> 슬론: 광전사<p>
 <div id="hide" style="display: none">
 <font color="#878787">
  <a href="/lore/book/bookDNE/">애셔: 관찰</a><br>
@@ -22,14 +35,18 @@
   <a href="../3/">아나: 예민</a><br>
   <a href="../4/">반스: 카나리아</a><br>
   <a href="../5/">애셔: 예측</a><br>
-  <a href="#">슬론: 방파제</a><br>
+  <a href="../6/">슬론: 방파제</a><br>
   <a href="../7/">아나: 물리학</a><br>
   <a href="../8/">반스: 점쟁이</a><br>
   <a href="../9/">애셔: 결론</a><br>
-  <a href="../10/">슬론: 광전사</a><br>
+  <a href="#">슬론: 광전사</a><br>
   <a href="../11/">아나: 블랙박스</a><br>
   <a href="../12/">반스: 명금</a><p></font>
 </div>
+
+
+<br>
+
   <div class="actor">
     <div class="actor__prefix"></div>
     <div id="tell1" class="actor__content"></div>
@@ -39,6 +56,8 @@
     <div class="actor__prefix"></div>
     <div id="tell2" class="actor__content"></div>
   </div>
+
+
 
   
   </p>

@@ -13,19 +13,10 @@
 <!-- partial:index.partial.html -->
 
 <main class="scene">
-애셔: 관찰<p>
-  <div class="actor">
-    <div class="actor__prefix"></div>
-    <div id="tell1" class="actor__content"></div>
-  </div>
-
-  <div class="actor">
-    <div class="actor__prefix"></div>
-    <div id="tell2" class="actor__content"></div>
-  </div>
-
-  <p>포함 문서<br>
- <a href="#">애셔: 관찰</a><br>
+<a href=#none id="show" onclick="if(hide.style.display=='none') {hide.style.display='';show.innerText='[목차]'} else {hide.style.display='none';show.innerText='[목차]'}">[목차]</a> 애셔: 관찰<p>
+<div id="hide" style="display: none">
+<font color="#878787">
+ <a href="/lore/book/bookDNE/">애셔: 관찰</a><br>
   <a href="./2/">슬론: 감독관</a><br>
   <a href="./3/">아나: 예민</a><br>
   <a href="./4/">반스: 카나리아</a><br>
@@ -36,7 +27,17 @@
   <a href="./9/">애셔: 결론</a><br>
   <a href="./10/">슬론: 광전사</a><br>
   <a href="./11/">아나: 블랙박스</a><br>
-  <a href="./12/">반스: 명금</a><br>
+  <a href="./12/">반스: 명금</a><p></font>
+</div>
+  <div class="actor">
+    <div class="actor__prefix"></div>
+    <div id="tell1" class="actor__content"></div>
+  </div>
+
+  <div class="actor">
+    <div class="actor__prefix"></div>
+    <div id="tell2" class="actor__content"></div>
+  </div>
 
   </p>
  
