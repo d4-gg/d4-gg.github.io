@@ -61,7 +61,7 @@ footer {
   height: 30px;
   width: 100%;
   background: #222;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   color: #edededfff;
   transition: background-color 150ms ease-out, color 150ms ease-out;
 }
