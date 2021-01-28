@@ -55,16 +55,7 @@ h3 {
   letter-spacing: -1px;
   color: #ededed;
 }
-footer {
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  height:30px;
-  width:100%;
-  background:#222;
-  color:#edededfff;
-  transition: background-color 150ms ease-out, color 150ms ease-out;
-}
+
 h2 {
   font-size: 28px;
 }
