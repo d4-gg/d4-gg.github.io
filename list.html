@@ -40,7 +40,12 @@ var hunt_value = JSON.parse(hunt_list);
 var l_sector_value = JSON.parse(l_sector_list);
 var m_sector_value = JSON.parse(m_sector_list);
 var l_ammo_value = JSON.parse(ammoL);
-var m_ammo_value = JSON.parse(ammoM);
+var m_ammo_value = JSON.parse(ammoM);	
+					
+var date = new Date();   
+var month = date.getMonth() + 1;  // 월
+var year = date.getFullYear(); // 년도
+							
 </script>
 
 <div class="topnav">
@@ -66,17 +71,14 @@ var m_ammo_value = JSON.parse(ammoM);
 					<hr>
 					
 					<script type="text/javascript">
-							var date = new Date();   
-
-							var year = date.getFullYear(); // 년도
 							var a_date=1;
 							var lm_count = 0;
 							var lam_count = 3;
 							var week = ['일', '월', '화', '수', '목', '금', '토'];
 							for(var i = 1; i <= 31; i++){
-								var c_date =year+'-01-'+a_date;
+								var c_date =year+'-'+month+'-'+a_date;
 								var dayOfWeek = week[new Date(c_date).getDay()];
-								document.write("<div class='card-header'>"+l_sector_value[lm_count].map+" / "+l_ammo_value[lam_count].ammo+"<br> 2021년 1월"+a_date+"일("+dayOfWeek+")</div><hr/>");
+								document.write("<div class='card-header'>"+l_sector_value[lm_count].map+" / "+l_ammo_value[lam_count].ammo+"<br> "+year+"년 "+month+"월"+a_date+"일("+dayOfWeek+")</div><hr/>");
 								a_date++;
 								lm_count++;
 								lam_count++;
@@ -104,14 +106,15 @@ var m_ammo_value = JSON.parse(ammoM);
 					<hr>
 					
 					<script type="text/javascript">
+					
 							var a_date=1;
 							var lm_count = 0;
 							var lam_count = 3;
 							var week = ['일', '월', '화', '수', '목', '금', '토'];
 							for(var i = 1; i <= 31; i++){
-								var c_date ='2021-01-'+a_date;
+								var c_date =year+'-'+month+'-'+a_date;
 								var dayOfWeek = week[new Date(c_date).getDay()];
-								document.write("<div class='card-header'>"+m_sector_value[lm_count].map+" / "+m_ammo_value[lam_count].ammo+"<br> 2021년 1월"+a_date+"일("+dayOfWeek+")</div><hr/>");
+								document.write("<div class='card-header'>"+m_sector_value[lm_count].map+" / "+m_ammo_value[lam_count].ammo+"<br> "+year+"년 "+month+"월"+a_date+"일("+dayOfWeek+")</div><hr/>");
 								a_date++;
 								lm_count++;
 								lam_count++;
