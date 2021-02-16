@@ -94,25 +94,6 @@ function master(){
 
 		</div>
 	</div><br>
-<div class="row">
-		<div class="col-lg-12">
-			<div class="card">
-				<div class="card-header">
-					<font size=3>
-					<b>시즌 데이터 수집 중</b>
-					</font>
-				</div>
-				<hr>
-				<div class="card-inner">
-					<div class="card-main">
-					 시즌15의 로테이션 정보를 수집 중 입니다. 수집이 완료되는 즉시 정상 서비스 할 수 있도록 하겠습니다.<br>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<br>
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="card">
@@ -137,7 +118,7 @@ function master(){
 				<div class="card-header">
 					<h2 class="card-title">
 						<script type="text/javascript">
-							document.write("[전설] " + l_sector_value[daysSince%5].map + " / " + l_ammo_value[daysSince%4].ammo);
+							document.write("[전설] " + l_sector_value[daysSince%9].map + " / " + l_ammo_value[daysSince%4].ammo);
 						</script>
 					</h2>
 					<a href="#" onclick="legono()" class="pull-right">
@@ -147,18 +128,18 @@ function master(){
 				<div class="card-header">
 					<h2 class="card-title">
 						<script type="text/javascript">
-							document.write("[마스터] " + m_sector_value[daysSince%5].map+ " / " + m_ammo_value[daysSince%4].ammo);
+							document.write("[마스터] " + m_sector_value[daysSince%9].map+ " / " + m_ammo_value[daysSince%4].ammo);
 						</script>
 					</h2>
 					<a href="#" onclick="master()" class="pull-right"><i class="material-icons">play_arrow</i></a>
 					</div>
 				</div>
-				<hr/>
+			<!--	<hr/>
 				<div class="card-footer">
 						<a href="list.html">
 							미리 보기
 						</a>
-					</div>
+					</div>-->
 			</div>
 		</div>
 	</div>
